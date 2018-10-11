@@ -24,3 +24,8 @@ _apt: [
   { state: "latest", name: "nodejs" },
   { state: "latest", name: "build-essential" },
 ]
+_npm: [
+  { state: "latest", name: "eslint" },
+  { state: "latest", name: "node-sass" },
+  { state: "latest", name: "prettier" },
+]

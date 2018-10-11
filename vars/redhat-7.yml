@@ -20,3 +20,8 @@ _yum: [
   { state: "latest", name: "gcc-c++" },
   { state: "latest", name: "make" },
 ]
+_npm: [
+  { state: "latest", name: "eslint" },
+  { state: "latest", name: "node-sass" },
+  { state: "latest", name: "prettier" },
+]
