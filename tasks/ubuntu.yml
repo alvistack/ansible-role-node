@@ -25,7 +25,7 @@
   apt_repository:
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
-  with_items: "{{ _apt_reposotory }}"
+  with_items: "{{ _apt_repository }}"
   tags: nodejs
 
 - name: apt-get update
