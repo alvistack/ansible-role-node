@@ -32,8 +32,8 @@
 - hosts: all
   remote_user: root
   tasks:
-    - name: nodejs --version
+    - name: node --version
       shell: |
-        nodejs --version
-      register: nodejs_version_result
-      changed_when: nodejs_version_result.rc != 0
+        node --version
+      register: node_version_result
+      changed_when: node_version_result.rc != 0
