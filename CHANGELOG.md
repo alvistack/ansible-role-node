@@ -1,0 +1,12 @@
+Ansible Role for Node.js
+====================
+
+1.2.0 - TBC
+-----------
+
+-   Ininitial release for Ansible 2.6
+-   Support both Ubuntu 16.04/18.04 or RHEL/CentOS 6/7
+-   Install Node.js 8.x on Ubuntu 16.04 from NodeSource
+-   Install Node.js 10.x on Ubuntu 18.04 from NodeSource
+-   Install Node.js 8.x on CentOS 6 from NodeSource
+-   Install Node.js 10.x on CentOS 7 from NodeSource
