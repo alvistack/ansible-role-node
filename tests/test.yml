@@ -33,25 +33,21 @@
   remote_user: root
   tasks:
     - name: node --version
-      shell: |
-        node --version
+      command: node --version
       register: node_version_result
       changed_when: node_version_result.rc != 0
 
     - name: eslint --version
-      shell: |
-        eslint --version
+      command: eslint --version
       register: eslint_version_result
       changed_when: eslint_version_result.rc != 0
 
     - name: node-sass --version
-      shell: |
-        node-sass --version
+      command: node-sass --version
       register: node_sass_version_result
       changed_when: node_sass_version_result.rc != 0
 
     - name: prettier --version
-      shell: |
-        prettier --version
+      command: prettier --version
       register: prettier_version_result
       changed_when: prettier_version_result.rc != 0
