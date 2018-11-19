@@ -28,12 +28,6 @@
   with_items: "{{ _apt_repository }}"
   tags: nodejs
 
-- name: apt-get update
-  apt:
-    update_cache: "yes"
-  changed_when: false
-  tags: nodejs
-
 - name: apt-get install
   apt:
     name: "{{ item.name }}"
