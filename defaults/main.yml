@@ -13,3 +13,29 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+# Specify NodeJS APT repository
+# apt_repository: [
+#   { state: "present", repo: "deb https://deb.nodesource.com/node_10.x xenial main" },
+# ]
+# apt_repository: [
+#   { state: "present", repo: "deb https://deb.nodesource.com/node_11.x bionic main" },
+# ]
+apt_repository: ~
+
+# Specify NodeJS YUM repository
+# yum_repository: [
+#   { state: "latest", name: "https://rpm.nodesource.com/pub_10.x/el/6/x86_64/nodesource-release-el6-1.noarch.rpm" },
+# ]
+# yum_repository: [
+#   { state: "latest", name: "https://rpm.nodesource.com/pub_11.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" },
+# ]
+yum_repository: ~
+
+# Specify NPM pacakge
+# npm: [
+#   { state: "latest", name: "eslint" },
+#   { state: "latest", name: "node-sass" },
+#   { state: "latest", name: "prettier" },
+# ]
+npm: ~

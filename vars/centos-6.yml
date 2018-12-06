@@ -14,11 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_yum_repository: [
+  { state: "latest", name: "https://rpm.nodesource.com/pub_10.x/el/6/x86_64/nodesource-release-el6-1.noarch.rpm" },
+]
 _yum: [
-  { state: "latest", name: "https://rpm.nodesource.com/pub_8.x/el/6/x86_64/nodesource-release-el6-1.noarch.rpm" },
-  { state: "latest", name: "nodejs" },
   { state: "latest", name: "gcc-c++" },
   { state: "latest", name: "make" },
+  { state: "latest", name: "nodejs" },
 ]
 _npm: [
   { state: "latest", name: "eslint" },

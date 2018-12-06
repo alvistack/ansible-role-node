@@ -7,6 +7,9 @@
   - CI with ansible-lint and galaxy-lint-rules
   - Use shell only when shell functionality is required
   - Replace tests from Docker to LXD
+  - Default install Node.js 10.x on Ubuntu 16.04 and CentOS 6
+  - Default install Node.js 11.x on Ubuntu 18.04 and CentOS 7
+  - Optionally override Node.js version with defaults/main.yml
 
 ## 2.0.0 - 2018-10-25
 
