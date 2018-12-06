@@ -18,11 +18,11 @@ _apt_key: [
   { state: "present", url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key" },
 ]
 _apt_repository: [
-  { state: "present", repo: "deb https://deb.nodesource.com/node_8.x bionic main" },
+  { state: "present", repo: "deb https://deb.nodesource.com/node_10.x xenial main" },
 ]
 _apt: [
-  { state: "latest", name: "nodejs" },
   { state: "latest", name: "build-essential" },
+  { state: "latest", name: "nodejs" },
 ]
 _npm: [
   { state: "latest", name: "eslint" },

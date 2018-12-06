@@ -50,5 +50,7 @@
     state: "{{ item.state }}"
     global: "yes"
     executable: "/usr/bin/npm --unsafe-perm --allow-root"
-  with_items: "{{ _npm }}"
+  with_items: "{{ npm or _npm }}"
+  register: result
+  until: result is succeeded
   tags: nodejs

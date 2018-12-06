@@ -34,20 +34,20 @@
   tasks:
     - name: node --version
       command: node --version
-      register: node_version_result
-      changed_when: node_version_result.rc != 0
+      register: result
+      changed_when: result is not succeeded
 
     - name: eslint --version
       command: eslint --version
-      register: eslint_version_result
-      changed_when: eslint_version_result.rc != 0
+      register: result
+      changed_when: result is not succeeded
 
     - name: node-sass --version
       command: node-sass --version
-      register: node_sass_version_result
-      changed_when: node_sass_version_result.rc != 0
+      register: result
+      changed_when: result is not succeeded
 
     - name: prettier --version
       command: prettier --version
-      register: prettier_version_result
-      changed_when: prettier_version_result.rc != 0
+      register: result
+      changed_when: result is not succeeded

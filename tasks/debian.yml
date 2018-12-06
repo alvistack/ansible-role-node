@@ -19,13 +19,15 @@
     url: "{{ item.url }}"
     state: "{{ item.state }}"
   with_items: "{{ _apt_key }}"
+  register: result
+  until: result is succeeded
   tags: nodejs
 
 - name: apt-add-repository
   apt_repository:
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
-  with_items: "{{ _apt_repository }}"
+  with_items: "{{ apt_repository or _apt_repository }}"
   tags: nodejs
 
 - name: apt-get install
@@ -33,4 +35,6 @@
     name: "{{ item.name }}"
     state: "{{ item.state }}"
   with_items: "{{ _apt }}"
+  register: result
+  until: result is succeeded
   tags: nodejs
