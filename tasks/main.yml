@@ -24,7 +24,7 @@
         - "{{ ansible_distribution | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
       paths: "../vars"
-      skip: "yes"
+      skip: true
   loop_control:
     loop_var: "loop_var"
   tags: nodejs
@@ -39,7 +39,7 @@
         - "{{ ansible_distribution | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
       paths: "."
-      skip: "yes"
+      skip: true
   loop_control:
     loop_var: "loop_var"
   tags: nodejs
@@ -48,7 +48,7 @@
   npm:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-    global: "yes"
+    global: true
     executable: "/usr/bin/npm --unsafe-perm --allow-root"
   with_items: "{{ npm }}"
   register: result
