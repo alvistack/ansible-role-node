@@ -18,6 +18,7 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
+    validate_certs: false
   with_items: "{{ yum_repository }}"
   register: result
   until: result is succeeded
@@ -27,6 +28,7 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
+    validate_certs: false
   with_items: "{{ _yum }}"
   register: result
   until: result is succeeded
