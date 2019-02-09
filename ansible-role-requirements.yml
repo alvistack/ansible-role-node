@@ -14,20 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: yum-config-manager --add-repo
-  yum:
-    name: "{{ item.name }}"
-    state: "{{ item.state }}"
-  with_items: "{{ yum_repository }}"
-  register: result
-  until: result is succeeded
-  tags: nodejs
-
-- name: yum install
-  yum:
-    name: "{{ item.name }}"
-    state: "{{ item.state }}"
-  with_items: "{{ _yum }}"
-  register: result
-  until: result is succeeded
-  tags: nodejs
+- name: python
+  src: https://github.com/alvistack/ansible-role-python
+  version: develop
