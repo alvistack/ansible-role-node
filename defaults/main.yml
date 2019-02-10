@@ -14,11 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Specify NodeJS APT repository.
-apt_repository: "{{ _apt_repository }}"
-
-# Specify NodeJS YUM repository.
-yum_repository: "{{ _yum_repository }}"
+# Specify NodeJS repository.
+repository: "{{ _repository }}"
 
 # Specify NPM pacakge.
 npm: "{{ _npm }}"

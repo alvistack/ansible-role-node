@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Unify variable name as `repository`
+
 ## 2.3.0 - 2019-01-30
 
 ### Major Changes

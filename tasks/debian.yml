@@ -27,7 +27,7 @@
   apt_repository:
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
-  with_items: "{{ apt_repository }}"
+  with_items: "{{ repository }}"
   tags: nodejs
 
 - name: apt-get install

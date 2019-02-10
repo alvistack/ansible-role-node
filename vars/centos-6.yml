@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_yum_repository: [
+_repository: [
   { state: "latest", name: "https://rpm.nodesource.com/pub_10.x/el/6/x86_64/nodesource-release-el6-1.noarch.rpm" },
 ]
 _yum: [
