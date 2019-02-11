@@ -20,7 +20,7 @@ _apt_key: [
 _repository: [
   { state: "present", repo: "deb https://deb.nodesource.com/node_10.x xenial main" },
 ]
-_apt: [
+_package: [
   { state: "latest", name: "g++" },
   { state: "latest", name: "make" },
   { state: "latest", name: "nodejs" },

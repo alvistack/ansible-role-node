@@ -17,7 +17,7 @@
 _repository: [
   { state: "latest", name: "https://rpm.nodesource.com/pub_11.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" },
 ]
-_yum: [
+_package: [
   { state: "latest", name: "gcc-c++" },
   { state: "latest", name: "make" },
   { state: "latest", name: "nodejs" },

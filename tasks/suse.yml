@@ -14,16 +14,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_repository: [
-  { state: "latest", name: "https://rpm.nodesource.com/pub_10.x/el/6/x86_64/nodesource-release-el6-1.noarch.rpm" },
-]
-_package: [
-  { state: "latest", name: "gcc-c++" },
-  { state: "latest", name: "make" },
-  { state: "latest", name: "nodejs" },
-]
-_npm: [
-  { state: "latest", name: "eslint" },
-  { state: "latest", name: "node-sass" },
-  { state: "latest", name: "prettier" },
-]
+- name: zypper addrepo
+  zypper_repository:
+    name: "{{ item.name }}"
+    repo: "{{ item.repo }}"
+    state: "{{ item.state }}"
+    auto_import_keys: true
+  with_items: "{{ repository }}"
+  tags: nodejs
+
+- name: zypper install
+  zypper:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+    disable_gpg_check: true
+  with_items: "{{ package }}"
+  register: result
+  until: result is succeeded
+  tags: nodejs
+
+- name: npm config set strict-ssl false
+  command: npm config set strict-ssl false
+  register: result
+  changed_when: result is not succeeded
+  tags: nodejs

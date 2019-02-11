@@ -17,5 +17,8 @@
 # Specify NodeJS repository.
 repository: "{{ _repository }}"
 
+# Specify NodeJS package.
+package: "{{ _package }}"
+
 # Specify NPM pacakge.
 npm: "{{ _npm }}"
