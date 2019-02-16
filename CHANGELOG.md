@@ -4,6 +4,9 @@
 
 ### Major Changes
 
+  - Unify variable name as `repository` and `package`
+  - Add openSUSE Leap 42/15 support
+
 ## 2.3.0 - 2019-01-30
 
 ### Major Changes

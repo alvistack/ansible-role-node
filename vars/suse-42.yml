@@ -15,12 +15,13 @@
 # limitations under the License.
 
 _repository: [
-  { state: "latest", name: "https://rpm.nodesource.com/pub_10.x/el/6/x86_64/nodesource-release-el6-1.noarch.rpm" },
+  { state: "present", name: "nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_42.3" },
 ]
 _package: [
   { state: "latest", name: "gcc-c++" },
   { state: "latest", name: "make" },
-  { state: "latest", name: "nodejs" },
+  { state: "latest", name: "nodejs10" },
+  { state: "latest", name: "npm10" },
 ]
 _npm: [
   { state: "latest", name: "eslint" },
