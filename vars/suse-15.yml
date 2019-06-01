@@ -15,7 +15,11 @@
 # limitations under the License.
 
 _repository: [
-  { state: "present", name: "nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" },
+  {
+    name: "nodejs",
+    repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0",
+    state: "present",
+  },
 ]
 _package: [
   { state: "latest", name: "gcc-c++" },
