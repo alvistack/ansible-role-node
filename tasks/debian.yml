@@ -26,7 +26,7 @@
   apt_key:
     url: "{{ item.url }}"
     state: "{{ item.state }}"
-  with_items: "{{ _apt_key }}"
+  loop: "{{ _apt_key }}"
   register: result
   until: result is succeeded
   tags: nodejs
@@ -35,14 +35,14 @@
   apt_repository:
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
-  with_items: "{{ repository }}"
+  loop: "{{ repository }}"
   tags: nodejs
 
 - name: apt-get install
   apt:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  with_items: "{{ package }}"
+  loop: "{{ package }}"
   register: result
   until: result is succeeded
   tags: nodejs
