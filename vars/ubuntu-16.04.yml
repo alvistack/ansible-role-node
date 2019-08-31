@@ -14,19 +14,38 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_apt_key: [
-  { state: "present", url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key" },
-]
-_repository: [
-  { state: "present", repo: "deb https://deb.nodesource.com/node_10.x xenial main" },
-]
-_package: [
-  { state: "latest", name: "g++" },
-  { state: "latest", name: "make" },
-  { state: "latest", name: "nodejs" },
-]
-_npm: [
-  { state: "latest", name: "eslint" },
-  { state: "latest", name: "node-sass" },
-  { state: "latest", name: "prettier" },
-]
+_apt_key:
+  - { state: "present", url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key" }
+
+_repository:
+  12.x:
+    - { state: "present", repo: "deb https://deb.nodesource.com/node_12.x xenial main" }
+  11.x:
+    - { state: "present", repo: "deb https://deb.nodesource.com/node_11.x xenial main" }
+  10.x:
+    - { state: "present", repo: "deb https://deb.nodesource.com/node_10.x xenial main" }
+  8.x:
+    - { state: "present", repo: "deb https://deb.nodesource.com/node_8.x xenial main" }
+      
+_package:
+  12.x: 
+    - { state: "latest", name: "g++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+  11.x: 
+    - { state: "latest", name: "g++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+  10.x: 
+    - { state: "latest", name: "g++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+  8.x: 
+    - { state: "latest", name: "g++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+
+_npm:
+  - { state: "latest", name: "eslint" }
+  - { state: "latest", name: "node-sass" }
+  - { state: "latest", name: "prettier" }

@@ -14,21 +14,39 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_repository: [
-  {
-    name: "nodejs",
-    repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0",
-    state: "present",
-  },
-]
-_package: [
-  { state: "latest", name: "gcc-c++" },
-  { state: "latest", name: "make" },
-  { state: "latest", name: "nodejs11" },
-  { state: "latest", name: "npm11" },
-]
-_npm: [
-  { state: "latest", name: "eslint" },
-  { state: "latest", name: "node-sass" },
-  { state: "latest", name: "prettier" },
-]
+_repository:
+  12.x:
+    - { state: "present", name: "nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
+  11.x:
+    - { state: "present", name: "nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
+  10.x:
+    - { state: "present", name: "nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
+  8.x:
+    - { state: "present", name: "nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
+
+_package:
+  12.x: 
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs12" }
+    - { state: "latest", name: "npm12" }
+  11.x: 
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs11" }
+    - { state: "latest", name: "npm11" }
+  10.x: 
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs10" }
+    - { state: "latest", name: "npm10" }
+  8.x: 
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs8" }
+    - { state: "latest", name: "npm8" }
+
+_npm:
+  - { state: "latest", name: "eslint" }
+  - { state: "latest", name: "node-sass" }
+  - { state: "latest", name: "prettier" }
