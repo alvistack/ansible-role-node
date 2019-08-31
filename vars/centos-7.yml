@@ -14,16 +14,35 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_repository: [
-  { state: "latest", name: "https://rpm.nodesource.com/pub_11.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" },
-]
-_package: [
-  { state: "latest", name: "gcc-c++" },
-  { state: "latest", name: "make" },
-  { state: "latest", name: "nodejs" },
-]
-_npm: [
-  { state: "latest", name: "eslint" },
-  { state: "latest", name: "node-sass" },
-  { state: "latest", name: "prettier" },
-]
+_repository:
+  12.x:
+    - { state: "latest", name: "https://rpm.nodesource.com/pub_12.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
+  11.x:
+    - { state: "latest", name: "https://rpm.nodesource.com/pub_11.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
+  10.x:
+    - { state: "latest", name: "https://rpm.nodesource.com/pub_10.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
+  8.x:
+    - { state: "latest", name: "https://rpm.nodesource.com/pub_8.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
+
+_package:
+  12.x:
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+  11.x:
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+  10.x:
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+  8.x:
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+
+_npm:
+  - { state: "latest", name: "eslint" }
+  - { state: "latest", name: "node-sass" }
+  - { state: "latest", name: "prettier" }

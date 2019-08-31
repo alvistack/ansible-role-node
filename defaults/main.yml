@@ -14,11 +14,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# NodeJS release.
+nodejs_release: "12.x"
+
 # Specify NodeJS repository.
-repository: "{{ _repository }}"
+repository: "{{ _repository[nodejs_release] }}"
 
 # Specify NodeJS package.
-package: "{{ _package }}"
+package: "{{ _package[nodejs_release] }}"
 
 # Specify NPM pacakge.
 npm: "{{ _npm }}"
