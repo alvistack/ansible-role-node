@@ -26,21 +26,21 @@ _repository:
     - { state: "present", repo: "deb https://deb.nodesource.com/node_10.x xenial main" }
   8.x:
     - { state: "present", repo: "deb https://deb.nodesource.com/node_8.x xenial main" }
-      
+
 _package:
-  12.x: 
+  12.x:
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-  11.x: 
+  11.x:
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-  10.x: 
+  10.x:
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-  8.x: 
+  8.x:
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
