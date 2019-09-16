@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # NodeJS release.
-nodejs_release: "12.x"
+nodejs_release: "12"
 
 # Specify NodeJS repository.
 repository: "{{ _repository[nodejs_release] }}"
