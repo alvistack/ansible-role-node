@@ -16,12 +16,3 @@
 
 # NodeJS release.
 nodejs_release: "12"
-
-# Specify NodeJS repository.
-repository: "{{ _repository[nodejs_release] }}"
-
-# Specify NodeJS package.
-package: "{{ _package[nodejs_release] }}"
-
-# Specify NPM pacakge.
-npm: "{{ _npm }}"

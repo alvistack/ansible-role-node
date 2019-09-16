@@ -30,14 +30,14 @@
     disable_gpg_check: true
     auto_import_keys: true
     autorefresh: true
-  loop: "{{ repository }}"
+  loop: "{{ _zypper_repository[nodejs_release] }}"
   tags: nodejs
 
 - name: zypper install
   zypper:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ package }}"
+  loop: "{{ _zypper[nodejs_release] }}"
   register: result
   until: result is succeeded
   tags: nodejs

@@ -35,14 +35,14 @@
   apt_repository:
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
-  loop: "{{ repository }}"
+  loop: "{{ _apt_repository[nodejs_release] }}"
   tags: nodejs
 
 - name: apt-get install
   apt:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ package }}"
+  loop: "{{ _apt[nodejs_release] }}"
   register: result
   until: result is succeeded
   tags: nodejs
