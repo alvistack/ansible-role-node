@@ -41,8 +41,3 @@ _package:
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-
-_npm:
-  - { state: "latest", name: "eslint" }
-  - { state: "latest", name: "node-sass" }
-  - { state: "latest", name: "prettier" }
