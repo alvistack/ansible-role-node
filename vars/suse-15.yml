@@ -16,13 +16,13 @@
 
 _zypper_repository:
   "12":
-    - { state: "present", name: "nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
+    - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
   "11":
-    - { state: "present", name: "nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
+    - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
   "10":
-    - { state: "present", name: "nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
+    - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
   "8":
-    - { state: "present", name: "nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
+    - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
 
 _zypper:
   "12":
