@@ -22,7 +22,7 @@ _repository:
   "8":
     - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
 
-_pacakge:
+_package:
   "12":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
