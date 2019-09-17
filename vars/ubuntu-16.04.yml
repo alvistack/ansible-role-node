@@ -17,7 +17,7 @@
 _apt_key:
   - { state: "present", url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key" }
 
-_apt_repository:
+_repository:
   "12":
     - { state: "present", repo: "deb https://deb.nodesource.com/node_12.x xenial main" }
   "11":
@@ -27,7 +27,7 @@ _apt_repository:
   "8":
     - { state: "present", repo: "deb https://deb.nodesource.com/node_8.x xenial main" }
 
-_apt:
+_pacakge:
   "12":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }

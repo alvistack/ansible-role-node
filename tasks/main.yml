@@ -54,7 +54,7 @@
     state: "{{ item.state }}"
     global: true
     executable: "/usr/bin/npm --unsafe-perm --allow-root"
-  loop: "{{ _npm }}"
+  loop: "{{ npm }}"
   register: result
   until: result is succeeded
   tags: nodejs

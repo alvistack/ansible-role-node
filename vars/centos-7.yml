@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_yum_repository:
+_repository:
   "12":
     - { state: "latest", name: "https://rpm.nodesource.com/pub_12.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
   "11":
@@ -24,7 +24,7 @@ _yum_repository:
   "8":
     - { state: "latest", name: "https://rpm.nodesource.com/pub_8.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
 
-_yum:
+_package:
   "12":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
