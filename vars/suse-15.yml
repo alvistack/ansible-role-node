@@ -17,8 +17,6 @@
 _repository:
   "12":
     - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
-  "11":
-    - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
   "10":
     - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.0" }
   "8":
@@ -30,11 +28,6 @@ _pacakge:
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs12" }
     - { state: "latest", name: "npm12" }
-  "11":
-    - { state: "latest", name: "gcc-c++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs11" }
-    - { state: "latest", name: "npm11" }
   "10":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }

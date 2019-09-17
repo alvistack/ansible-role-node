@@ -17,8 +17,6 @@
 _repository:
   "12":
     - { state: "latest", name: "https://rpm.nodesource.com/pub_12.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
-  "11":
-    - { state: "latest", name: "https://rpm.nodesource.com/pub_11.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
   "10":
     - { state: "latest", name: "https://rpm.nodesource.com/pub_10.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
   "8":
@@ -26,10 +24,6 @@ _repository:
 
 _package:
   "12":
-    - { state: "latest", name: "gcc-c++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs" }
-  "11":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }

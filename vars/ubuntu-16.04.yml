@@ -20,8 +20,6 @@ _apt_key:
 _repository:
   "12":
     - { state: "present", repo: "deb https://deb.nodesource.com/node_12.x xenial main" }
-  "11":
-    - { state: "present", repo: "deb https://deb.nodesource.com/node_11.x xenial main" }
   "10":
     - { state: "present", repo: "deb https://deb.nodesource.com/node_10.x xenial main" }
   "8":
@@ -29,10 +27,6 @@ _repository:
 
 _pacakge:
   "12":
-    - { state: "latest", name: "g++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs" }
-  "11":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
