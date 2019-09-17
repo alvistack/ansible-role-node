@@ -26,7 +26,7 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ _yum_repository[nodejs_release] }}"
+  loop: "{{ nodejs_repository }}"
   register: result
   until: result is succeeded
   tags: nodejs
@@ -35,7 +35,7 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ _yum[nodejs_release] }}"
+  loop: "{{ nodejs_package }}"
   register: result
   until: result is succeeded
   tags: nodejs
