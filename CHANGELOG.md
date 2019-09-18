@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Run molecule test manually on Travis CI
   - Abstract package parameters with multiple version support
 
 ## 3.3.0 - 2019-08-27
