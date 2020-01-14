@@ -15,14 +15,14 @@
 # limitations under the License.
 
 _repository:
+  "13": ~
   "12":
     - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.1" }
   "10":
     - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.1" }
-  "8":
-    - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.1" }
 
 _package:
+  "13": ~
   "12":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
@@ -33,8 +33,3 @@ _package:
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs10" }
     - { state: "latest", name: "npm10" }
-  "8":
-    - { state: "latest", name: "gcc-c++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs8" }
-    - { state: "latest", name: "npm8" }

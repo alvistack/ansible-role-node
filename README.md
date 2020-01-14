@@ -1,9 +1,9 @@
 # Ansible Role for Node.js
 
-[![Travis](https://img.shields.io/travis/alvistack/ansible-role-nodejs.svg)](https://travis-ci.org/alvistack/ansible-role-nodejs)
-[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-nodejs.svg)](https://github.com/alvistack/ansible-role-nodejs)
-[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-nodejs.svg)](https://github.com/alvistack/ansible-role-nodejs/blob/master/LICENSE)
-[![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.nodejs-blue.svg)](https://galaxy.ansible.com/alvistack/nodejs)
+[![Travis](https://img.shields.io/travis/alvistack/ansible-role-node.svg)](https://travis-ci.org/alvistack/ansible-role-node)
+[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-node.svg)](https://github.com/alvistack/ansible-role-node)
+[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-node.svg)](https://github.com/alvistack/ansible-role-node/blob/master/LICENSE)
+[![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.node-blue.svg)](https://galaxy.ansible.com/alvistack/node)
 
 Ansible Role for Node.js Installation.
 

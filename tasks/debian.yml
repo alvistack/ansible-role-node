@@ -20,7 +20,7 @@
     state: "present"
   register: result
   until: result is succeeded
-  tags: nodejs
+  tags: node
 
 - name: apt-key add
   apt_key:
@@ -29,20 +29,20 @@
   loop: "{{ _apt_key }}"
   register: result
   until: result is succeeded
-  tags: nodejs
+  tags: node
 
 - name: apt-add-repository
   apt_repository:
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
-  loop: "{{ nodejs_repository }}"
-  tags: nodejs
+  loop: "{{ node_repository }}"
+  tags: node
 
 - name: apt-get install
   apt:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ nodejs_package }}"
+  loop: "{{ node_package }}"
   register: result
   until: result is succeeded
-  tags: nodejs
+  tags: node

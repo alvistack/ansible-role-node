@@ -20,7 +20,7 @@
     state: "present"
   register: result
   until: result is succeeded
-  tags: nodejs
+  tags: node
 
 - name: zypper addrepo
   zypper_repository:
@@ -30,14 +30,14 @@
     disable_gpg_check: true
     auto_import_keys: true
     autorefresh: true
-  loop: "{{ nodejs_repository }}"
-  tags: nodejs
+  loop: "{{ node_repository }}"
+  tags: node
 
 - name: zypper install
   zypper:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ nodejs_package }}"
+  loop: "{{ node_package }}"
   register: result
   until: result is succeeded
-  tags: nodejs
+  tags: node
