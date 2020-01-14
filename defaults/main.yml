@@ -15,13 +15,13 @@
 # limitations under the License.
 
 # NodeJS release.
-nodejs_release: "12"
+node_release: "13"
 
 # Specify NodeJS repository.
-nodejs_repository: "{{ _repository[nodejs_release] }}"
+node_repository: "{{ _repository[node_release] }}"
 
 # Specify NodeJS package.
-nodejs_package: "{{ _package[nodejs_release] }}"
+node_package: "{{ _package[node_release] }}"
 
 # Specify NPM pacakge.
 npm: "{{ _npm }}"

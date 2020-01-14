@@ -15,23 +15,23 @@
 # limitations under the License.
 
 _repository:
+  "13":
+    - { state: "latest", name: "https://rpm.nodesource.com/pub_13.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
   "12":
     - { state: "latest", name: "https://rpm.nodesource.com/pub_12.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
   "10":
     - { state: "latest", name: "https://rpm.nodesource.com/pub_10.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
-  "8":
-    - { state: "latest", name: "https://rpm.nodesource.com/pub_8.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
 
 _package:
+  "13":
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
   "12":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
   "10":
-    - { state: "latest", name: "gcc-c++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs" }
-  "8":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }

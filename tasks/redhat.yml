@@ -20,22 +20,22 @@
     state: "present"
   register: result
   until: result is succeeded
-  tags: nodejs
+  tags: node
 
 - name: yum-config-manager --add-repo
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ nodejs_repository }}"
+  loop: "{{ node_repository }}"
   register: result
   until: result is succeeded
-  tags: nodejs
+  tags: node
 
 - name: yum install
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ nodejs_package }}"
+  loop: "{{ node_package }}"
   register: result
   until: result is succeeded
-  tags: nodejs
+  tags: node
