@@ -14,7 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_npm:
+_yarn_download:
+  1.21.1:
+    url: "https://yarnpkg.com/downloads/1.21.1/yarn-v1.21.1.tar.gz"
+    dest: "/var/cache/ansible/yarn-v1.21.1.tar.gz"
+    checksum: "sha1:1d5da01a9a03492dc4a5957befc1fd12da83d89c"
+
+_yarn:
   - { state: "latest", name: "eslint" }
   - { state: "latest", name: "gulp-cli" }
   - { state: "latest", name: "node-sass" }
