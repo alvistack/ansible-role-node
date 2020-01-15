@@ -27,9 +27,7 @@ _package:
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs12" }
-    - { state: "latest", name: "npm12" }
   "10":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs10" }
-    - { state: "latest", name: "npm10" }

@@ -23,5 +23,11 @@ node_repository: "{{ _repository[node_release] }}"
 # Specify NodeJS package.
 node_package: "{{ _package[node_release] }}"
 
-# Specify NPM pacakge.
-npm: "{{ _npm }}"
+# Yarn release.
+yarn_release: "1.21.1"
+
+# Yarn download details.
+yarn_download: "{{ _yarn_download[yarn_release] }}"
+
+# Specify Yarn pacakge.
+yarn: "{{ _yarn }}"

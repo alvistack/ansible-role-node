@@ -7,6 +7,7 @@
   - Rename role as `node`
   - Add Node.js 13 support
   - Remove Node.js 8 support
+  - Replace NPM with Yarn
 
 ## 4.0.0 - 2019-11-05
 

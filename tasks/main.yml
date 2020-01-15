@@ -48,13 +48,70 @@
   ignore_errors: true
   tags: node
 
-- name: npm install -g
-  npm:
+- name: prepare directories
+  file:
+    dest: "{{ item.dest }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0755') }}"
+    state: "{{ item.state | default('directory') }}"
+  loop:
+    - { dest: "/opt/yarn" }
+    - { dest: "/usr/local/bin" }
+    - { dest: "{{ yarn_download.dest | dirname }}" }
+  tags: node
+
+- name: download archive
+  get_url:
+    url: "{{ item.url }}"
+    dest: "{{ item.dest }}"
+    checksum: "{{ item.checksum }}"
+    timeout: 300
+  loop:
+    - "{{ yarn_download }}"
+  register: get_url_result
+  until: get_url_result is succeeded
+  tags: node
+
+- name: unarchive package
+  shell: |
+    set -o pipefail
+    rm -rf /opt/yarn && mkdir -p /opt/yarn
+    cd /opt/yarn
+    TMP_DIR="`mktemp -d`" \
+      && tar -zx -C $TMP_DIR -f {{ yarn_download.dest }} \
+      && cp -rfT $TMP_DIR/* . \
+      && rm -rf $TMP_DIR
+    chown -Rf root:root /opt/yarn
+    chmod 0755 /opt/yarn/bin/*
+    cd /usr/local/bin
+    ln -fs /opt/yarn/bin/* .
+  args:
+    executable: "/bin/bash"
+  when: get_url_result is changed
+  tags: node
+
+- name: prepare files
+  file:
+    dest: "{{ item.dest }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0644') }}"
+    state: "{{ item.state | default('file') }}"
+  loop:
+    - { dest: "/opt/yarn/bin/yarn", mode: "0755" }
+    - { dest: "/opt/yarn/bin/yarnpkg", mode: "0755" }
+    - { dest: "/usr/local/bin/yarn", mode: "0755", state: "link" }
+    - { dest: "/usr/local/bin/yarnpkg", mode: "0755", state: "link" }
+  tags: node
+
+- name: yarn global add
+  yarn:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
     global: true
-    executable: "/usr/bin/npm --unsafe-perm --allow-root"
-  loop: "{{ npm }}"
+  loop: "{{ yarn }}"
   register: result
   until: result is succeeded
+  changed_when: result is not succeeded
   tags: node

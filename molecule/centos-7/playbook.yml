@@ -29,6 +29,11 @@
       register: result
       changed_when: result is not succeeded
 
+    - name: yarn --version
+      command: yarn --version
+      register: result
+      changed_when: result is not succeeded
+
     - name: eslint --version
       command: eslint --version
       register: result
