@@ -76,7 +76,8 @@
 - name: unarchive package
   shell: |
     set -o pipefail
-    rm -rf /opt/yarn && mkdir -p /opt/yarn
+    rm -rf /opt/yarn \
+      && mkdir -p /opt/yarn
     cd /opt/yarn
     TMP_DIR="`mktemp -d`" \
       && tar -zx -C $TMP_DIR -f {{ yarn_download.dest }} \
