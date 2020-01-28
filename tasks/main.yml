@@ -81,12 +81,12 @@
     cd /opt/yarn
     TMP_DIR="`mktemp -d`" \
       && tar -zx -C $TMP_DIR -f {{ yarn_download.dest }} \
-      && cp -rfT $TMP_DIR/* . \
+      && chown root:root $TMP_DIR/yarn* \
+      && chmod 0755 $TMP_DIR/yarn* \
+      && cp -rfT $TMP_DIR/yarn* . \
       && rm -rf $TMP_DIR
-    chown -Rf root:root /opt/yarn
-    chmod 0755 /opt/yarn/bin/*
     cd /usr/local/bin
-    ln -fs /opt/yarn/bin/* .
+    ln -fs /opt/yarn/bin/yarn* .
   args:
     executable: "/bin/bash"
   when: get_url_result is changed
