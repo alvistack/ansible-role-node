@@ -62,6 +62,8 @@
   tags: node
 
 - name: download archive
+  vars:
+    ansible_python_interpreter: "python3"
   get_url:
     url: "{{ item.url }}"
     dest: "{{ item.dest }}"
@@ -107,6 +109,8 @@
   tags: node
 
 - name: yarn global add
+  environment:
+    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
   yarn:
     name: "{{ item.name }}"
     state: "{{ item.state }}"

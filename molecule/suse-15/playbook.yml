@@ -18,6 +18,7 @@
   remote_user: root
   become: true
   roles:
+    - role: python
     - role: node
 
 - hosts: all
@@ -30,21 +31,29 @@
       changed_when: result is not succeeded
 
     - name: yarn --version
+      environment:
+        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       command: yarn --version
       register: result
       changed_when: result is not succeeded
 
     - name: eslint --version
+      environment:
+        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       command: eslint --version
       register: result
       changed_when: result is not succeeded
 
     - name: node-sass --version
+      environment:
+        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       command: node-sass --version
       register: result
       changed_when: result is not succeeded
 
     - name: prettier --version
+      environment:
+        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       command: prettier --version
       register: result
       changed_when: result is not succeeded
