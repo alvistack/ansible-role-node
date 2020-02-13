@@ -17,9 +17,13 @@
 _repository:
   "13": []
   "12":
-    - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.1" }
+    - name: "devel:languages:nodejs"
+      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.1"
+      state: "present"
   "10":
-    - { state: "present", name: "devel:languages:nodejs", repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.1" }
+    - name: "devel:languages:nodejs"
+      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.1"
+      state: "present"
 
 _package:
   "13": []
