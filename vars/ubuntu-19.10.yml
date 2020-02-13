@@ -19,11 +19,11 @@ _apt_key:
 
 _repository:
   "13":
-    - { state: "present", repo: "deb https://deb.nodesource.com/node_13.x bionic main" }
+    - { state: "present", repo: "deb https://deb.nodesource.com/node_13.x eoan main" }
   "12":
-    - { state: "present", repo: "deb https://deb.nodesource.com/node_12.x bionic main" }
+    - { state: "present", repo: "deb https://deb.nodesource.com/node_12.x eoan main" }
   "10":
-    - { state: "present", repo: "deb https://deb.nodesource.com/node_10.x bionic main" }
+    - { state: "present", repo: "deb https://deb.nodesource.com/node_10.x eoan main" }
 
 _package:
   "13":
