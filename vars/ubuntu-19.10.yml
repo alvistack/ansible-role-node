@@ -14,24 +14,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_apt_key:
+  - { state: "present", url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key" }
+
 _repository:
-  "13": []
+  "13":
+    - { state: "present", repo: "deb https://deb.nodesource.com/node_13.x eoan main" }
   "12":
-    - name: "devel:languages:nodejs"
-      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.1"
-      state: "present"
+    - { state: "present", repo: "deb https://deb.nodesource.com/node_12.x eoan main" }
   "10":
-    - name: "devel:languages:nodejs"
-      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.1"
-      state: "present"
+    - { state: "present", repo: "deb https://deb.nodesource.com/node_10.x eoan main" }
 
 _package:
-  "13": []
+  "13":
+    - { state: "latest", name: "g++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
   "12":
-    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs12" }
+    - { state: "latest", name: "nodejs" }
   "10":
-    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs10" }
+    - { state: "latest", name: "nodejs" }
