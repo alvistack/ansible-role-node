@@ -56,8 +56,8 @@
     mode: "{{ item.mode | default('0755') }}"
     state: "{{ item.state | default('directory') }}"
   loop:
-    - { dest: "/opt/yarn" }
     - { dest: "/usr/local/bin" }
+    - { dest: "/usr/local/yarn" }
     - { dest: "{{ yarn_download.dest | dirname }}" }
   tags: node
 
@@ -78,9 +78,9 @@
 - name: unarchive package
   shell: |
     set -o pipefail
-    rm -rf /opt/yarn \
-      && mkdir -p /opt/yarn
-    cd /opt/yarn
+    rm -rf /usr/local/yarn \
+      && mkdir -p /usr/local/yarn
+    cd /usr/local/yarn
     TMP_DIR="`mktemp -d`" \
       && tar -zx -C $TMP_DIR -f {{ yarn_download.dest }} \
       && chown root:root $TMP_DIR/yarn* \
@@ -88,7 +88,7 @@
       && cp -rfT $TMP_DIR/yarn* . \
       && rm -rf $TMP_DIR
     cd /usr/local/bin
-    ln -fs /opt/yarn/bin/yarn* .
+    ln -fs /usr/local/yarn/bin/yarn* .
   args:
     executable: "/bin/bash"
   when: get_url_result is changed
@@ -102,10 +102,10 @@
     mode: "{{ item.mode | default('0644') }}"
     state: "{{ item.state | default('file') }}"
   loop:
-    - { dest: "/opt/yarn/bin/yarn", mode: "0755" }
-    - { dest: "/opt/yarn/bin/yarnpkg", mode: "0755" }
     - { dest: "/usr/local/bin/yarn", mode: "0755", state: "link" }
     - { dest: "/usr/local/bin/yarnpkg", mode: "0755", state: "link" }
+    - { dest: "/usr/local/yarn/bin/yarn", mode: "0755" }
+    - { dest: "/usr/local/yarn/bin/yarnpkg", mode: "0755" }
   tags: node
 
 - name: yarn global add
