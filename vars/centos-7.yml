@@ -16,11 +16,14 @@
 
 _repository:
   "13":
-    - { state: "latest", name: "https://rpm.nodesource.com/pub_13.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
+    - name: "https://rpm.nodesource.com/pub_13.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm"
+      state: "latest"
   "12":
-    - { state: "latest", name: "https://rpm.nodesource.com/pub_12.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
+    - name: "https://rpm.nodesource.com/pub_12.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm"
+      state: "latest"
   "10":
-    - { state: "latest", name: "https://rpm.nodesource.com/pub_10.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm" }
+    - name: "https://rpm.nodesource.com/pub_10.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm"
+      state: "latest"
 
 _package:
   "13":
