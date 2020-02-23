@@ -81,7 +81,7 @@
     rm -rf /usr/local/yarn \
       && mkdir -p /usr/local/yarn
     cd /usr/local/yarn
-    TMP_DIR="`mktemp -d`" \
+    TMP_DIR="$(mktemp -d)" \
       && tar -zx -C $TMP_DIR -f {{ yarn_download.dest }} \
       && chown root:root $TMP_DIR/yarn* \
       && chmod 0755 $TMP_DIR/yarn* \
