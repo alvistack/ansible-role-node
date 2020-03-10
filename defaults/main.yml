@@ -24,7 +24,7 @@ node_repository: "{{ _repository[node_release] }}"
 node_package: "{{ _package[node_release] }}"
 
 # Yarn version.
-yarn_version: "1.22.3"
+yarn_version: "1.22.4"
 
 # Yarn download details.
 yarn_download: "{{ _yarn_download[yarn_version] }}"
