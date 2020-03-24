@@ -15,24 +15,28 @@
 # limitations under the License.
 
 _yarn_download:
+  1.22.4:
+    url: "https://github.com/yarnpkg/yarn/releases/download/v1.22.4/yarn-v1.22.4.tar.gz"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/yarn-v1.22.4.tar.gz"
+    checksum: "sha1:01c1197ca5b27f21edc8bc472cd4c8ce0e5a470e"
   1.22.3:
-    url: "https://yarnpkg.com/downloads/1.22.3/yarn-v1.22.3.tar.gz"
+    url: "https://github.com/yarnpkg/yarn/releases/download/v1.22.3/yarn-v1.22.3.tar.gz"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/yarn-v1.22.3.tar.gz"
     checksum: "sha1:d205cbd6783332a212c5ae92d73c77178c2d2f28"
   1.22.2:
-    url: "https://yarnpkg.com/downloads/1.22.2/yarn-v1.22.2.tar.gz"
+    url: "https://github.com/yarnpkg/yarn/releases/download/v1.22.2/yarn-v1.22.2.tar.gz"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/yarn-v1.22.2.tar.gz"
     checksum: "sha1:edba41a27ebaeb17f2afa3141359748ff0ec988b"
   1.22.1:
-    url: "https://yarnpkg.com/downloads/1.22.1/yarn-v1.22.1.tar.gz"
+    url: "https://github.com/yarnpkg/yarn/releases/download/v1.22.1/yarn-v1.22.1.tar.gz"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/yarn-v1.22.1.tar.gz"
     checksum: "sha1:c430367c09b43670e5dec7881e83302622d7edab"
   1.22.0:
-    url: "https://yarnpkg.com/downloads/1.22.0/yarn-v1.22.0.tar.gz"
+    url: "https://github.com/yarnpkg/yarn/releases/download/v1.22.0/yarn-v1.22.0.tar.gz"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/yarn-v1.22.0.tar.gz"
     checksum: "sha1:acf82906e36bcccd1ccab1cfb73b87509667c881"
   1.21.1:
-    url: "https://yarnpkg.com/downloads/1.21.1/yarn-v1.21.1.tar.gz"
+    url: "https://github.com/yarnpkg/yarn/releases/download/v1.21.1/yarn-v1.21.1.tar.gz"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/yarn-v1.21.1.tar.gz"
     checksum: "sha1:1d5da01a9a03492dc4a5957befc1fd12da83d89c"
 
