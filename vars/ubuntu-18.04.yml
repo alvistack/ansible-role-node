@@ -19,7 +19,7 @@ _apt_key:
     id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
     state: "present"
 
-_repository:
+_apt_repository:
   "13":
     - repo: "deb https://deb.nodesource.com/node_13.x bionic main"
       state: "present"
@@ -30,7 +30,7 @@ _repository:
     - repo: "deb https://deb.nodesource.com/node_10.x bionic main"
       state: "present"
 
-_package:
+_apt:
   "13":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }

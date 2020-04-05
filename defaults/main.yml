@@ -17,12 +17,6 @@
 # NodeJS release.
 node_release: "13"
 
-# Specify NodeJS repository.
-node_repository: "{{ _repository[node_release] }}"
-
-# Specify NodeJS package.
-node_package: "{{ _package[node_release] }}"
-
 # Yarn version.
 yarn_version: "1.22.4"
 
