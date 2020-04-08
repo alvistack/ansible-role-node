@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_repository:
+_zypper_repository:
   "13": []
   "12":
     - name: "devel:languages:nodejs"
@@ -25,7 +25,7 @@ _repository:
       repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.1"
       state: "present"
 
-_package:
+_zypper:
   "13": []
   "12":
     - { state: "latest", name: "gcc-c++" }

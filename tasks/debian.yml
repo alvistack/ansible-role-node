@@ -36,7 +36,7 @@
   apt_repository:
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
-  loop: "{{ node_repository }}"
+  loop: "{{ _apt_repository[node_release] }}"
   register: result
   until: result is succeeded
   tags: node
@@ -45,7 +45,7 @@
   apt:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ node_package }}"
+  loop: "{{ _apt[node_release] }}"
   register: result
   until: result is succeeded
   tags: node
