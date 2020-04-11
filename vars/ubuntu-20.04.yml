@@ -14,7 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_apt_key: []
+_apt_key:
+  "13": []
+  "12": []
+  "10": []
 
 _apt_repository:
   "13": []
