@@ -15,18 +15,39 @@
 # limitations under the License.
 
 _apt_key:
-  "13": []
-  "12": []
-  "10": []
+  "13":
+    - url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+      id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
+      state: "present"
+  "12":
+    - url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+      id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
+      state: "present"
+  "10":
+    - url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+      id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
+      state: "present"
 
 _apt_repository:
-  "13": []
-  "12": []
-  "10": []
+  "13":
+    - repo: "deb https://deb.nodesource.com/node_13.x focal main"
+      state: "present"
+  "12":
+    - repo: "deb https://deb.nodesource.com/node_12.x focal main"
+      state: "present"
+  "10":
+    - repo: "deb https://deb.nodesource.com/node_10.x focal main"
+      state: "present"
 
 _apt:
-  "13": []
-  "12": []
+  "13":
+    - { state: "latest", name: "g++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+  "12":
+    - { state: "latest", name: "g++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
   "10":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
