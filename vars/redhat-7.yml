@@ -15,8 +15,8 @@
 # limitations under the License.
 
 _rpm_repository:
-  "13":
-    - name: "https://rpm.nodesource.com/pub_13.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm"
+  "14":
+    - name: "https://rpm.nodesource.com/pub_14.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm"
       state: "latest"
   "12":
     - name: "https://rpm.nodesource.com/pub_12.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm"
@@ -26,7 +26,7 @@ _rpm_repository:
       state: "latest"
 
 _yum:
-  "13":
+  "14":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
