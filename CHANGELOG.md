@@ -4,6 +4,11 @@
 
 ### Major Changes
 
+  - Remove Ubuntu 19.10 support
+
+  - Add Node.js 14 support
+  - Remove Node.js 13 support
+
 ## 4.4.0 - 2020-06-04
 
 ### Major Changes
