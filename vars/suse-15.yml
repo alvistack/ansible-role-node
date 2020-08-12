@@ -15,18 +15,24 @@
 # limitations under the License.
 
 _zypper_repository:
-  "14": []
+  "14":
+    - name: "devel:languages:nodejs"
+      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.2"
+      state: "present"
   "12":
     - name: "devel:languages:nodejs"
-      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.1"
+      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.2"
       state: "present"
   "10":
     - name: "devel:languages:nodejs"
-      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.1"
+      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.2"
       state: "present"
 
 _zypper:
-  "14": []
+  "14":
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs14" }
   "12":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
