@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Support openSUSE Leap 15.2
   - Remove Ubuntu 19.10 support
 
   - Add Node.js 14 support
