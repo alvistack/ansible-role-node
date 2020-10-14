@@ -16,7 +16,6 @@
 
 - name: include default variables
   include_vars: "../vars/main.yml"
-  tags: node
 
 - name: include release specific variables
   include_vars: "{{ lookup('first_found', _params) }}"
@@ -31,7 +30,6 @@
       paths:
         - "../vars"
   ignore_errors: true
-  tags: node
 
 - name: include release specific tasks
   include_tasks: "{{ lookup('first_found', _params) }}"
@@ -46,7 +44,6 @@
       paths:
         - "."
   ignore_errors: true
-  tags: node
 
 - name: prepare directories
   file:
@@ -59,7 +56,6 @@
     - { dest: "/usr/local/bin" }
     - { dest: "/usr/local/yarn" }
     - { dest: "{{ yarn_download.dest | dirname }}" }
-  tags: node
 
 - name: download archive
   vars:
@@ -74,7 +70,6 @@
     - "{{ yarn_download }}"
   register: get_url_result
   until: get_url_result is succeeded
-  tags: node
 
 - name: unarchive package
   shell: |
@@ -93,7 +88,6 @@
   args:
     executable: "/bin/bash"
   when: get_url_result is changed
-  tags: node
 
 - name: prepare files
   file:
@@ -107,7 +101,6 @@
     - { dest: "/usr/local/bin/yarnpkg", mode: "0755", state: "link" }
     - { dest: "/usr/local/yarn/bin/yarn", mode: "0755" }
     - { dest: "/usr/local/yarn/bin/yarnpkg", mode: "0755" }
-  tags: node
 
 - name: yarn global add
   environment:
@@ -120,4 +113,3 @@
   register: result
   until: result is succeeded
   changed_when: result is not succeeded
-  tags: node

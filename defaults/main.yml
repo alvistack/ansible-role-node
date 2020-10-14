@@ -18,7 +18,7 @@
 node_release: "14"
 
 # Yarn version.
-yarn_version: "1.22.5"
+yarn_version: "1.22.10"
 
 # Yarn download details.
 yarn_download: "{{ _yarn_download[yarn_version] }}"

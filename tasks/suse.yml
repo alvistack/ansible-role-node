@@ -22,7 +22,6 @@
     state: "present"
   register: result
   until: result is succeeded
-  tags: node
 
 - name: zypper addrepo
   vars:
@@ -37,7 +36,6 @@
   loop: "{{ _zypper_repository[node_release] }}"
   register: result
   until: result is succeeded
-  tags: node
 
 - name: zypper install
   vars:
@@ -49,4 +47,3 @@
   loop: "{{ _zypper[node_release] }}"
   register: result
   until: result is succeeded
-  tags: node
