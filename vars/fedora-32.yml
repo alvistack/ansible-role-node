@@ -15,7 +15,7 @@
 # limitations under the License.
 
 _rpm_key:
-  "15":
+  "14":
     - key: "https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
@@ -29,8 +29,8 @@ _rpm_key:
       state: "present"
 
 _rpm_repository:
-  "15":
-    - name: "https://rpm.nodesource.com/pub_15.x/fc/32/x86_64/nodesource-release-fc32-1.noarch.rpm"
+  "14":
+    - name: "https://rpm.nodesource.com/pub_14.x/fc/32/x86_64/nodesource-release-fc32-1.noarch.rpm"
       state: "latest"
   "12":
     - name: "https://rpm.nodesource.com/pub_12.x/fc/32/x86_64/nodesource-release-fc32-1.noarch.rpm"
@@ -40,7 +40,7 @@ _rpm_repository:
       state: "latest"
 
 _yum:
-  "15":
+  "14":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }

@@ -4,8 +4,6 @@
 
 ### Major Changes
 
-  - Add Node.js 15 support
-  - Remove Node.js 14 support
   - Remove redundant tags from tasks
   - Import Yum repo GPG key manually
 

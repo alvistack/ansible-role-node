@@ -15,7 +15,7 @@
 # limitations under the License.
 
 _apt_key:
-  "15":
+  "14":
     - url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
       id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
       state: "present"
@@ -29,8 +29,8 @@ _apt_key:
       state: "present"
 
 _apt_repository:
-  "15":
-    - repo: "deb https://deb.nodesource.com/node_15.x focal main"
+  "14":
+    - repo: "deb https://deb.nodesource.com/node_14.x focal main"
       state: "present"
   "12":
     - repo: "deb https://deb.nodesource.com/node_12.x focal main"
@@ -40,7 +40,7 @@ _apt_repository:
       state: "present"
 
 _apt:
-  "15":
+  "14":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
