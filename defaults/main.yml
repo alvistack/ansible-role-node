@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # NodeJS release.
-node_release: "14"
+node_release: "15"
 
 # Yarn version.
 yarn_version: "1.22.10"
