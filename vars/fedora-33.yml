@@ -30,13 +30,13 @@ _rpm_key:
 
 _rpm_repository:
   "15":
-    - name: "https://rpm.nodesource.com/pub_15.x/fc/32/x86_64/nodesource-release-fc32-1.noarch.rpm"
+    - name: "https://rpm.nodesource.com/pub_15.x/fc/33/x86_64/nodesource-release-fc33-1.noarch.rpm"
       state: "latest"
   "14":
-    - name: "https://rpm.nodesource.com/pub_14.x/fc/32/x86_64/nodesource-release-fc32-1.noarch.rpm"
+    - name: "https://rpm.nodesource.com/pub_14.x/fc/33/x86_64/nodesource-release-fc33-1.noarch.rpm"
       state: "latest"
   "12":
-    - name: "https://rpm.nodesource.com/pub_12.x/fc/32/x86_64/nodesource-release-fc32-1.noarch.rpm"
+    - name: "https://rpm.nodesource.com/pub_12.x/fc/33/x86_64/nodesource-release-fc33-1.noarch.rpm"
       state: "latest"
 
 _yum:
