@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Add Node.js 15 support
+  - Remove Node.js 14 support
   - Support Fedora 33
   - Remove Fedora 32 support
   - Support Ubuntu 20.10
