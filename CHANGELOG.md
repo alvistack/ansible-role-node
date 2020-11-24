@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Migrate from Travis CI to GitLab CI
   - Add Node.js 15 support
   - Remove Node.js 14 support
   - Support Fedora 33
