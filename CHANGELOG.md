@@ -4,6 +4,12 @@
 
 ### Major Changes
 
+  - Migrate from Travis CI to GitLab CI
+  - Add Node.js 15 support
+  - Remove Node.js 14 support
+  - Support Fedora 33
+  - Remove Fedora 32 support
+  - Support Ubuntu 20.10
   - Remove redundant tags from tasks
   - Import Yum repo GPG key manually
 

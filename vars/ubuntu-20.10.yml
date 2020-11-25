@@ -30,13 +30,13 @@ _apt_key:
 
 _apt_repository:
   "15":
-    - repo: "deb https://deb.nodesource.com/node_15.x buster main"
+    - repo: "deb https://deb.nodesource.com/node_15.x groovy main"
       state: "present"
   "14":
-    - repo: "deb https://deb.nodesource.com/node_14.x buster main"
+    - repo: "deb https://deb.nodesource.com/node_14.x groovy main"
       state: "present"
   "12":
-    - repo: "deb https://deb.nodesource.com/node_12.x buster main"
+    - repo: "deb https://deb.nodesource.com/node_12.x groovy main"
       state: "present"
 
 _apt:

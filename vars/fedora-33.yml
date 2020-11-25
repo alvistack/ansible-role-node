@@ -15,40 +15,40 @@
 # limitations under the License.
 
 _rpm_key:
+  "15":
+    - key: "https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
+      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
+      state: "present"
   "14":
     - key: "https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
   "12":
-    - key: "https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
-      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
-      state: "present"
-  "10":
     - key: "https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
 
 _rpm_repository:
+  "15":
+    - name: "https://rpm.nodesource.com/pub_15.x/fc/33/x86_64/nodesource-release-fc33-1.noarch.rpm"
+      state: "latest"
   "14":
-    - name: "https://rpm.nodesource.com/pub_14.x/fc/32/x86_64/nodesource-release-fc32-1.noarch.rpm"
+    - name: "https://rpm.nodesource.com/pub_14.x/fc/33/x86_64/nodesource-release-fc33-1.noarch.rpm"
       state: "latest"
   "12":
-    - name: "https://rpm.nodesource.com/pub_12.x/fc/32/x86_64/nodesource-release-fc32-1.noarch.rpm"
-      state: "latest"
-  "10":
-    - name: "https://rpm.nodesource.com/pub_10.x/fc/32/x86_64/nodesource-release-fc32-1.noarch.rpm"
+    - name: "https://rpm.nodesource.com/pub_12.x/fc/33/x86_64/nodesource-release-fc33-1.noarch.rpm"
       state: "latest"
 
 _yum:
+  "15":
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
   "14":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
   "12":
-    - { state: "latest", name: "gcc-c++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs" }
-  "10":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
