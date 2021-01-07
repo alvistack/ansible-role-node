@@ -17,15 +17,15 @@
 _zypper_repository:
   "15":
     - name: "devel:languages:nodejs"
-      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.2"
+      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Tumbleweed"
       state: "present"
   "14":
     - name: "devel:languages:nodejs"
-      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.2"
+      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Tumbleweed"
       state: "present"
   "12":
     - name: "devel:languages:nodejs"
-      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.2"
+      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Tumbleweed"
       state: "present"
 
 _zypper:
