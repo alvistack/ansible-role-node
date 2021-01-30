@@ -56,6 +56,7 @@
     - { dest: "/usr/local/bin" }
     - { dest: "/usr/local/yarn" }
     - { dest: "{{ yarn_download.dest | dirname }}" }
+  register: file_result
 
 - name: download archive
   vars:
@@ -68,12 +69,14 @@
     timeout: 300
   loop:
     - "{{ yarn_download }}"
+  when: file_result is changed
   register: get_url_result
   until: get_url_result is succeeded
 
 - name: unarchive package
   shell: |
     set -euo pipefail
+    exec &> >(tee -a {{ yarn_download.dest }}.log)
     rm -rf /usr/local/yarn \
       && mkdir -p /usr/local/yarn
     cd /usr/local/yarn
@@ -87,7 +90,7 @@
     ln -fs /usr/local/yarn/bin/yarn* .
   args:
     executable: "/bin/bash"
-  when: get_url_result is changed
+    creates: "{{ yarn_download.dest }}.log"
 
 - name: prepare files
   file:
