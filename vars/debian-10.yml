@@ -44,11 +44,14 @@ _apt:
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
+    - { state: "latest", name: "tar" }
   "14":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
+    - { state: "latest", name: "tar" }
   "12":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
+    - { state: "latest", name: "tar" }

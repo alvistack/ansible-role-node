@@ -33,11 +33,14 @@ _zypper:
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs15" }
+    - { state: "latest", name: "tar" }
   "14":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs14" }
+    - { state: "latest", name: "tar" }
   "12":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs12" }
+    - { state: "latest", name: "tar" }
