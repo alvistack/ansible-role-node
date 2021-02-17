@@ -16,15 +16,15 @@
 
 _yarn_download:
   "1.22.10":
-    url: "https://github.com/yarnpkg/yarn/releases/download/v1.22.10/yarn-v1.22.10.tar.gz"
+    url: "http://github.com/yarnpkg/yarn/releases/download/v1.22.10/yarn-v1.22.10.tar.gz"
     dest: "/var/cache/ansible/7e433d4a77e2c79e6a7ae4866782608a8e8bcad3ec6783580577c59538381a6e/yarn-v1.22.10.tar.gz"
     checksum: "sha256:7e433d4a77e2c79e6a7ae4866782608a8e8bcad3ec6783580577c59538381a6e"
   "1.22.5":
-    url: "https://github.com/yarnpkg/yarn/releases/download/v1.22.5/yarn-v1.22.5.tar.gz"
+    url: "http://github.com/yarnpkg/yarn/releases/download/v1.22.5/yarn-v1.22.5.tar.gz"
     dest: "/var/cache/ansible/c664fb4692e4dfea750a37a533780834b40198c00cef4bbc5e8c14abab2ac141/yarn-v1.22.5.tar.gz"
     checksum: "sha256:c664fb4692e4dfea750a37a533780834b40198c00cef4bbc5e8c14abab2ac141"
   "1.22.4":
-    url: "https://github.com/yarnpkg/yarn/releases/download/v1.22.4/yarn-v1.22.4.tar.gz"
+    url: "http://github.com/yarnpkg/yarn/releases/download/v1.22.4/yarn-v1.22.4.tar.gz"
     dest: "/var/cache/ansible/bc5316aa110b2f564a71a3d6e235be55b98714660870c5b6b2d2d3f12587fb58/yarn-v1.22.4.tar.gz"
     checksum: "sha256:bc5316aa110b2f564a71a3d6e235be55b98714660870c5b6b2d2d3f12587fb58"
 
