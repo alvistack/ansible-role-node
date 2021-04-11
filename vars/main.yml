@@ -33,3 +33,7 @@ _yarn:
   - { state: "latest", name: "gulp-cli" }
   - { state: "latest", name: "node-sass" }
   - { state: "latest", name: "prettier" }
+  - { state: "latest", name: "stylelint" }
+  - { state: "latest", name: "stylelint-config-standard" }
+  - { state: "latest", name: "stylelint-csstree-validator" }
+  - { state: "latest", name: "stylelint-scss" }
