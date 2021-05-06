@@ -30,17 +30,17 @@ _rpm_key:
 
 _rpm_download:
   "15":
-    - url: "http://rpm.nodesource.com/pub_15.x/fc/33/x86_64/nodesource-release-fc33-1.noarch.rpm"
-      dest: "/var/cache/ansible/12d80d7da796643a40265b073dfcb28b56735c804f1d7840ddd21f262a575079/nodesource-release-fc33-1.noarch.rpm"
-      sha256sum: "12d80d7da796643a40265b073dfcb28b56735c804f1d7840ddd21f262a575079"
+    - url: "http://rpm.nodesource.com/pub_15.x/fc/34/x86_64/nodesource-release-fc34-1.noarch.rpm"
+      dest: "/var/cache/ansible/20d59f2d1e3e9e94ec329e8eed3e405116bee8e554b1aed94876f0472ba0e0f9/nodesource-release-fc34-1.noarch.rpm"
+      sha256sum: "20d59f2d1e3e9e94ec329e8eed3e405116bee8e554b1aed94876f0472ba0e0f9"
   "14":
-    - url: "http://rpm.nodesource.com/pub_14.x/fc/33/x86_64/nodesource-release-fc33-1.noarch.rpm"
-      dest: "/var/cache/ansible/e8bd629ad92297920fbfcc308810e21af504e58e0ef400cdb488cd6a26a1282f/nodesource-release-fc33-1.noarch.rpm"
-      sha256sum: "e8bd629ad92297920fbfcc308810e21af504e58e0ef400cdb488cd6a26a1282f"
+    - url: "http://rpm.nodesource.com/pub_14.x/fc/34/x86_64/nodesource-release-fc34-1.noarch.rpm"
+      dest: "/var/cache/ansible/0ae6a53a4f230af2003fc743585bf3375f07c79ec7b4cb3b171f1f02462beb6b/nodesource-release-fc34-1.noarch.rpm"
+      sha256sum: "0ae6a53a4f230af2003fc743585bf3375f07c79ec7b4cb3b171f1f02462beb6b"
   "12":
-    - url: "http://rpm.nodesource.com/pub_12.x/fc/33/x86_64/nodesource-release-fc33-1.noarch.rpm"
-      dest: "/var/cache/ansible/b1432ac80c0b81dbc7baf75c36833930dbdf4ff0fac160df6213beb1f2d09243/nodesource-release-fc33-1.noarch.rpm"
-      sha256sum: "b1432ac80c0b81dbc7baf75c36833930dbdf4ff0fac160df6213beb1f2d09243"
+    - url: "http://rpm.nodesource.com/pub_12.x/fc/34/x86_64/nodesource-release-fc34-1.noarch.rpm"
+      dest: "/var/cache/ansible/b1432ac80c0b81dbc7baf75c36834930dbdf4ff0fac160df6213beb1f2d09243/nodesource-release-fc34-1.noarch.rpm"
+      sha256sum: "7e437497d51db9c65d832eebee4ac6d2ca53c75080bcfb1c06037dd829a07c9c"
 
 _yum:
   "15":

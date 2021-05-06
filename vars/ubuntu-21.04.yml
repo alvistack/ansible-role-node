@@ -30,13 +30,13 @@ _apt_key:
 
 _apt_repository:
   "15":
-    - repo: "deb http://deb.nodesource.com/node_15.x groovy main"
+    - repo: "deb http://deb.nodesource.com/node_15.x hirsute main"
       state: "present"
   "14":
-    - repo: "deb http://deb.nodesource.com/node_14.x groovy main"
+    - repo: "deb http://deb.nodesource.com/node_14.x hirsute main"
       state: "present"
   "12":
-    - repo: "deb http://deb.nodesource.com/node_12.x groovy main"
+    - repo: "deb http://deb.nodesource.com/node_12.x hirsute main"
       state: "present"
 
 _apt:
