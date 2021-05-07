@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Add Node.js 16 support
+  - Remove Node.js 15 support
   - Support Fedora 34
   - Support Ubuntu 21.04
   - Simplify download archive logic
