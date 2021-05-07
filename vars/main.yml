@@ -29,7 +29,6 @@ _yarn_download:
     sha256sum: "bc5316aa110b2f564a71a3d6e235be55b98714660870c5b6b2d2d3f12587fb58"
 
 _yarn:
-  - { state: "absent", name: "node-sass" }
   - { state: "latest", name: "eslint" }
   - { state: "latest", name: "gulp-cli" }
   - { state: "latest", name: "prettier" }
