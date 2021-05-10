@@ -37,10 +37,10 @@
       register: result
       changed_when: result is not succeeded
 
-    - name: node-sass --version
+    - name: sass --version
       environment:
         PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      command: node-sass --version
+      command: sass --version
       register: result
       changed_when: result is not succeeded
 
