@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Upgrade minimal Ansible support to 4.0.0
   - Add Node.js 16 support
   - Remove Node.js 15 support
   - Support Fedora 34
