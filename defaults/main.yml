@@ -17,11 +17,8 @@
 # NodeJS release.
 node_release: "16"
 
-# Yarn version.
-yarn_version: "1.22.10"
-
-# Yarn download details.
-yarn_download: "{{ _yarn_download[yarn_version] }}"
+# Specify NPM pacakge.
+npm: "{{ _npm }}"
 
 # Specify Yarn pacakge.
 yarn: "{{ _yarn }}"

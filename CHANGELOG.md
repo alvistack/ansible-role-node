@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Support Yarn 2
+  - Support Yarn Bash Completion
   - Improve download archive logic
 
 ## 5.0.0 - 2021-06-02
