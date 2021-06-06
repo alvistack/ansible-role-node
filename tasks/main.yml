@@ -27,8 +27,9 @@
       files:
         - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version | lower }}.yml"
         - "{{ ansible_distribution | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
-        - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
         - "{{ ansible_distribution | lower }}.yml"
+        - "{{ ansible_os_family | lower }}-{{ ansible_distribution_version | lower }}.yml"
+        - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
       paths:
         - "../vars"
@@ -44,63 +45,33 @@
       files:
         - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version | lower }}.yml"
         - "{{ ansible_distribution | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
-        - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
         - "{{ ansible_distribution | lower }}.yml"
+        - "{{ ansible_os_family | lower }}-{{ ansible_distribution_version | lower }}.yml"
+        - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
       paths:
         - "."
       skip: true
 
-- name: download archive
-  shell: |
-    set -euo pipefail
-    TMP_DIR="$(mktemp -d)" \
-      && cd $TMP_DIR \
-      && mkdir -p ./{{ item.dest | dirname }} \
-      && curl -skL -m 300 {{ item.url }} > ./{{ item.dest }} \
-      && echo -n "{{ item.sha256sum }} ./{{ item.dest }}" | sha256sum -c - \
-      && mkdir -p {{ item.dest | dirname }} \
-      && mv ./{{ item.dest }} {{ item.dest }} \
-      && rm -rf $TMP_DIR
-  args:
-    executable: "/bin/bash"
-    creates: "{{ item.dest | dirname }}"
-  loop:
-    - "{{ yarn_download }}"
-  register: result
-  until: result is succeeded
-
-- name: unarchive package
-  shell: |
-    set -euo pipefail
-    exec &> >(tee -a {{ yarn_download.dest }}.log)
-    rm -rf /usr/local/yarn \
-      && mkdir -p /usr/local/yarn
-    cd /usr/local/yarn
-    TMP_DIR="$(mktemp -d)" \
-      && tar -zx -C $TMP_DIR -f {{ yarn_download.dest }} \
-      && chown root:root $TMP_DIR/yarn* \
-      && chmod 0755 $TMP_DIR/yarn* \
-      && cp -rfT $TMP_DIR/yarn* . \
-      && rm -rf $TMP_DIR
-    cd /usr/local/bin
-    ln -fs /usr/local/yarn/bin/yarn* .
-  args:
-    executable: "/bin/bash"
-    creates: "{{ yarn_download.dest }}.log"
-
-- name: prepare files
+- name: prepare directories
   file:
     dest: "{{ item.dest }}"
     owner: "{{ item.owner | default('root') }}"
     group: "{{ item.group | default('root') }}"
-    mode: "{{ item.mode | default('0644') }}"
-    state: "{{ item.state | default('file') }}"
+    mode: "{{ item.mode | default('0755') }}"
+    state: "{{ item.state | default('directory') }}"
   loop:
-    - { dest: "/usr/local/bin/yarn", mode: "0755", state: "link" }
-    - { dest: "/usr/local/bin/yarnpkg", mode: "0755", state: "link" }
-    - { dest: "/usr/local/yarn/bin/yarn", mode: "0755" }
-    - { dest: "/usr/local/yarn/bin/yarnpkg", mode: "0755" }
+    - { dest: "/etc/bash_completion.d" }
+
+- name: npm install --global
+  npm:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+    global: true
+  loop: "{{ npm }}"
+  register: result
+  until: result is succeeded
+  changed_when: result is not succeeded
 
 - name: yarn global add
   environment:
@@ -113,3 +84,23 @@
   register: result
   until: result is succeeded
   changed_when: result is not succeeded
+
+- name: copy templates
+  template:
+    dest: "{{ item.dest }}"
+    src: "{{ item.src | default('./templates' + item.dest + '.j2') }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0644') }}"
+  loop:
+    - { dest: "/etc/bash_completion.d/yarn" }
+
+- name: prepare files
+  file:
+    dest: "{{ item.dest }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0644') }}"
+    state: "{{ item.state | default('file') }}"
+  loop:
+    - { dest: "/etc/bash_completion.d/yarn" }

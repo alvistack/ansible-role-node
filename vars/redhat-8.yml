@@ -31,27 +31,30 @@ _rpm_key:
 _rpm_download:
   "16":
     - url: "http://rpm.nodesource.com/pub_16.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
-      dest: "/var/cache/ansible/cd2e4fdb371cf722a13a33f648eb59ebea86b3575bdab4c91accc57c44118997/nodesource-release-el8-1.noarch.rpm"
-      sha256sum: "cd2e4fdb371cf722a13a33f648eb59ebea86b3575bdab4c91accc57c44118997"
+      dest: "/tmp/89a841779f96b15e58667a11c278cd3675eb00d0dcc4be9ace816ccef44d7533/nodesource-release-el8-1.noarch.rpm"
+      checksum: "89a841779f96b15e58667a11c278cd3675eb00d0dcc4be9ace816ccef44d7533"
   "14":
     - url: "http://rpm.nodesource.com/pub_14.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
-      dest: "/var/cache/ansible/961a154058e4c507bf956cdd7070a64d684eeaff33457d7e645db396a7db4c3f/nodesource-release-el8-1.noarch.rpm"
-      sha256sum: "961a154058e4c507bf956cdd7070a64d684eeaff33457d7e645db396a7db4c3f"
+      dest: "/tmp/961a154058e4c507bf956cdd7070a64d684eeaff33457d7e645db396a7db4c3f/nodesource-release-el8-1.noarch.rpm"
+      checksum: "961a154058e4c507bf956cdd7070a64d684eeaff33457d7e645db396a7db4c3f"
   "12":
     - url: "http://rpm.nodesource.com/pub_12.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
-      dest: "/var/cache/ansible/46d71c5c8c0b74fc7de7884416c7cac80d40745358cd6dc78019b53e00e14fbe/nodesource-release-el8-1.noarch.rpm"
-      sha256sum: "46d71c5c8c0b74fc7de7884416c7cac80d40745358cd6dc78019b53e00e14fbe"
+      dest: "/tmp/46d71c5c8c0b74fc7de7884416c7cac80d40745358cd6dc78019b53e00e14fbe/nodesource-release-el8-1.noarch.rpm"
+      checksum: "46d71c5c8c0b74fc7de7884416c7cac80d40745358cd6dc78019b53e00e14fbe"
 
 _yum:
   "16":
+    - { state: "latest", name: "bash-completion" }
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
   "14":
+    - { state: "latest", name: "bash-completion" }
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
   "12":
+    - { state: "latest", name: "bash-completion" }
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }

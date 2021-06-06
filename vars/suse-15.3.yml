@@ -14,44 +14,33 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_apt_key:
+_zypper_repository:
   "16":
-    - url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
-      id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
+    - name: "devel:languages:nodejs"
+      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.3"
       state: "present"
   "14":
-    - url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
-      id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
+    - name: "devel:languages:nodejs"
+      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.3"
       state: "present"
   "12":
-    - url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
-      id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
+    - name: "devel:languages:nodejs"
+      repo: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.3"
       state: "present"
 
-_apt_repository:
-  "16":
-    - repo: "deb http://deb.nodesource.com/node_16.x focal main"
-      state: "present"
-  "14":
-    - repo: "deb http://deb.nodesource.com/node_14.x focal main"
-      state: "present"
-  "12":
-    - repo: "deb http://deb.nodesource.com/node_12.x focal main"
-      state: "present"
-
-_apt:
+_zypper:
   "16":
     - { state: "latest", name: "bash-completion" }
-    - { state: "latest", name: "g++" }
+    - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs" }
+    - { state: "latest", name: "nodejs16" }
   "14":
     - { state: "latest", name: "bash-completion" }
-    - { state: "latest", name: "g++" }
+    - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs" }
+    - { state: "latest", name: "nodejs14" }
   "12":
     - { state: "latest", name: "bash-completion" }
-    - { state: "latest", name: "g++" }
+    - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs" }
+    - { state: "latest", name: "nodejs12" }
