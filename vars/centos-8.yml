@@ -31,15 +31,15 @@ _rpm_key:
 _rpm_download:
   "16":
     - url: "http://rpm.nodesource.com/pub_16.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
-      dest: "/tmp/89a841779f96b15e58667a11c278cd3675eb00d0dcc4be9ace816ccef44d7533/nodesource-release-el8-1.noarch.rpm"
+      dest: "/var/cache/ansible/89a841779f96b15e58667a11c278cd3675eb00d0dcc4be9ace816ccef44d7533/nodesource-release-el8-1.noarch.rpm"
       checksum: "89a841779f96b15e58667a11c278cd3675eb00d0dcc4be9ace816ccef44d7533"
   "14":
     - url: "http://rpm.nodesource.com/pub_14.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
-      dest: "/tmp/961a154058e4c507bf956cdd7070a64d684eeaff33457d7e645db396a7db4c3f/nodesource-release-el8-1.noarch.rpm"
+      dest: "/var/cache/ansible/961a154058e4c507bf956cdd7070a64d684eeaff33457d7e645db396a7db4c3f/nodesource-release-el8-1.noarch.rpm"
       checksum: "961a154058e4c507bf956cdd7070a64d684eeaff33457d7e645db396a7db4c3f"
   "12":
     - url: "http://rpm.nodesource.com/pub_12.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
-      dest: "/tmp/46d71c5c8c0b74fc7de7884416c7cac80d40745358cd6dc78019b53e00e14fbe/nodesource-release-el8-1.noarch.rpm"
+      dest: "/var/cache/ansible/46d71c5c8c0b74fc7de7884416c7cac80d40745358cd6dc78019b53e00e14fbe/nodesource-release-el8-1.noarch.rpm"
       checksum: "46d71c5c8c0b74fc7de7884416c7cac80d40745358cd6dc78019b53e00e14fbe"
 
 _yum:
