@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Support Debian 11
   - Support openSUSE Leap 15.3
   - Support Yarn 2
   - Support Yarn Bash Completion
