@@ -34,13 +34,16 @@ _zypper:
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs16" }
+    - { state: "latest", name: "npm16" }
   "14":
     - { state: "latest", name: "bash-completion" }
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs14" }
+    - { state: "latest", name: "npm14" }
   "12":
     - { state: "latest", name: "bash-completion" }
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs12" }
+    - { state: "latest", name: "npm12" }
