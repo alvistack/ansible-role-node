@@ -16,27 +16,33 @@
 
 _apt_key:
   "16":
-    - url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+    - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
+      url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
       id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
       state: "present"
   "14":
-    - url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+    - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
+      url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
       id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
       state: "present"
   "12":
-    - url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+    - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
+      url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
       id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
       state: "present"
 
 _apt_repository:
   "16":
-    - repo: "deb http://deb.nodesource.com/node_16.x hirsute main"
+    - filename: "nodesource"
+      repo: "deb http://deb.nodesource.com/node_16.x hirsute main"
       state: "present"
   "14":
-    - repo: "deb http://deb.nodesource.com/node_14.x hirsute main"
+    - filename: "nodesource"
+      repo: "deb http://deb.nodesource.com/node_14.x hirsute main"
       state: "present"
   "12":
-    - repo: "deb http://deb.nodesource.com/node_12.x hirsute main"
+    - filename: "nodesource"
+      repo: "deb http://deb.nodesource.com/node_12.x hirsute main"
       state: "present"
 
 _apt:
