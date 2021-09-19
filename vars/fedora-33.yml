@@ -44,17 +44,14 @@ _rpm_download:
 
 _yum:
   "16":
-    - { state: "latest", name: "bash-completion" }
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
   "14":
-    - { state: "latest", name: "bash-completion" }
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
   "12":
-    - { state: "latest", name: "bash-completion" }
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
