@@ -1,5 +1,7 @@
 # Ansible Role for Node.js
 
+<img src="/alvistack.svg" width="75" alt="AlviStack">
+
 [![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-node/master)](https://gitlab.com/alvistack/ansible-role-node/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-node.svg)](https://github.com/alvistack/ansible-role-node/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-node.svg)](https://github.com/alvistack/ansible-role-node/blob/master/LICENSE)
