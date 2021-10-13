@@ -1,0 +1,57 @@
+---
+
+# (c) Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+_rpm_key:
+  "16":
+    - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
+      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
+      state: "present"
+  "14":
+    - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
+      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
+      state: "present"
+  "12":
+    - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
+      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
+      state: "present"
+
+_rpm_download:
+  "16":
+    - url: "http://rpm.nodesource.com/pub_16.x/fc/34/x86_64/nodesource-release-fc34-1.noarch.rpm"
+      dest: "/var/cache/ansible/d3b6ae2ea04f93c8a453ffcfc1bb07abfd7185e99ce0676e6462931dd6cf60df/nodesource-release-fc34-1.noarch.rpm"
+      checksum: "d3b6ae2ea04f93c8a453ffcfc1bb07abfd7185e99ce0676e6462931dd6cf60df"
+  "14":
+    - url: "http://rpm.nodesource.com/pub_14.x/fc/34/x86_64/nodesource-release-fc34-1.noarch.rpm"
+      dest: "/var/cache/ansible/0ae6a53a4f230af2003fc743585bf3375f07c79ec7b4cb3b171f1f02462beb6b/nodesource-release-fc34-1.noarch.rpm"
+      checksum: "0ae6a53a4f230af2003fc743585bf3375f07c79ec7b4cb3b171f1f02462beb6b"
+  "12":
+    - url: "http://rpm.nodesource.com/pub_12.x/fc/34/x86_64/nodesource-release-fc34-1.noarch.rpm"
+      dest: "/var/cache/ansible/b1432ac80c0b81dbc7baf75c36834930dbdf4ff0fac160df6213beb1f2d09243/nodesource-release-fc34-1.noarch.rpm"
+      checksum: "7e437497d51db9c65d832eebee4ac6d2ca53c75080bcfb1c06037dd829a07c9c"
+
+_yum:
+  "16":
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+  "14":
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+  "12":
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
