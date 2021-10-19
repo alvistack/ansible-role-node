@@ -34,15 +34,15 @@ _apt_key:
 _apt_repository:
   "16":
     - filename: "nodesource"
-      repo: "deb http://deb.nodesource.com/node_16.x hirsute main"
+      repo: "deb http://deb.nodesource.com/node_16.x impish main"
       state: "present"
   "14":
     - filename: "nodesource"
-      repo: "deb http://deb.nodesource.com/node_14.x hirsute main"
+      repo: "deb http://deb.nodesource.com/node_14.x impish main"
       state: "present"
   "12":
     - filename: "nodesource"
-      repo: "deb http://deb.nodesource.com/node_12.x hirsute main"
+      repo: "deb http://deb.nodesource.com/node_12.x impish main"
       state: "present"
 
 _apt:
