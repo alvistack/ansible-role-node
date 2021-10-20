@@ -15,7 +15,7 @@
 # limitations under the License.
 
 _apt_key:
-  "16":
+  "17":
     - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
       url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
       id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
@@ -32,9 +32,9 @@ _apt_key:
       state: "present"
 
 _apt_repository:
-  "16":
+  "17":
     - filename: "nodesource"
-      repo: "deb http://deb.nodesource.com/node_16.x focal main"
+      repo: "deb http://deb.nodesource.com/node_17.x focal main"
       state: "present"
   "14":
     - filename: "nodesource"
@@ -46,7 +46,7 @@ _apt_repository:
       state: "present"
 
 _apt:
-  "16":
+  "17":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
