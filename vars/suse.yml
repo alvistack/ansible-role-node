@@ -15,7 +15,7 @@
 # limitations under the License.
 
 _rpm_key:
-  "16":
+  "17":
     - key: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Tumbleweed/repodata/repomd.xml.key"
       fingerprint: "7A9C33EDF1E5C271CD4BCCBB3C66CD9BA89C3A8A"
       state: "present"
@@ -29,7 +29,7 @@ _rpm_key:
       state: "present"
 
 _yum_repository:
-  "16":
+  "17":
     - file: "devel_languages_nodejs"
       name: "devel_languages_nodejs"
       description: "Node.js (openSUSE_Tumbleweed)"
@@ -64,11 +64,11 @@ _yum_repository:
       state: "present"
 
 _zypper:
-  "16":
+  "17":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs16" }
-    - { state: "latest", name: "npm16" }
+    - { state: "latest", name: "nodejs17" }
+    - { state: "latest", name: "npm17" }
   "14":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }

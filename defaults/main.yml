@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # NodeJS release.
-node_release: "16"
+node_release: "17"
 
 # Specify NPM pacakge.
 npm: "{{ _npm }}"
