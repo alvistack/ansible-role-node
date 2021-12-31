@@ -19,11 +19,11 @@ _rpm_key:
     - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
-  "14":
+  "16":
     - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
-  "12":
+  "14":
     - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
@@ -31,27 +31,27 @@ _rpm_key:
 _rpm_download:
   "17":
     - url: "http://rpm.nodesource.com/pub_17.x/fc/34/x86_64/nodesource-release-fc34-1.noarch.rpm"
-      dest: "/var/cache/ansible/d3b6ae2ea04f93c8a453ffcfc1bb07abfd7185e99ce0676e6462931dd6cf60df/nodesource-release-fc34-1.noarch.rpm"
-      checksum: "d3b6ae2ea04f93c8a453ffcfc1bb07abfd7185e99ce0676e6462931dd6cf60df"
+      dest: "/var/cache/ansible/c2430cdcb2eda4121d47340b20268f5b2163288f04835e8453596b01be489f96/nodesource-release-fc34-1.noarch.rpm"
+      checksum: "c2430cdcb2eda4121d47340b20268f5b2163288f04835e8453596b01be489f96"
+  "16":
+    - url: "http://rpm.nodesource.com/pub_16.x/fc/34/x86_64/nodesource-release-fc34-1.noarch.rpm"
+      dest: "/var/cache/ansible/4a1362e5b39d03c0aa16ff176f4a72746d7a721dcf84a6c5ebf9e93641f58c33/nodesource-release-fc34-1.noarch.rpm"
+      checksum: "4a1362e5b39d03c0aa16ff176f4a72746d7a721dcf84a6c5ebf9e93641f58c33"
   "14":
     - url: "http://rpm.nodesource.com/pub_14.x/fc/34/x86_64/nodesource-release-fc34-1.noarch.rpm"
-      dest: "/var/cache/ansible/0ae6a53a4f230af2003fc743585bf3375f07c79ec7b4cb3b171f1f02462beb6b/nodesource-release-fc34-1.noarch.rpm"
-      checksum: "0ae6a53a4f230af2003fc743585bf3375f07c79ec7b4cb3b171f1f02462beb6b"
-  "12":
-    - url: "http://rpm.nodesource.com/pub_12.x/fc/34/x86_64/nodesource-release-fc34-1.noarch.rpm"
       dest: "/var/cache/ansible/b1432ac80c0b81dbc7baf75c36834930dbdf4ff0fac160df6213beb1f2d09243/nodesource-release-fc34-1.noarch.rpm"
-      checksum: "7e437497d51db9c65d832eebee4ac6d2ca53c75080bcfb1c06037dd829a07c9c"
+      checksum: "c13698db97b967b7b6c2c9c16589ed3b30cff9456ae2ab41d7171ee70553136e"
 
 _yum:
   "17":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-  "14":
+  "16":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-  "12":
+  "14":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }

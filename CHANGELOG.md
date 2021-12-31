@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Support Node.js 16
+  - Remove Node.js 12 support
   - Support Fedora Rawhide
   - Support Debian Testing
 

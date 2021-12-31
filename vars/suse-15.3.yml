@@ -19,11 +19,11 @@ _rpm_key:
     - key: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.3/repodata/repomd.xml.key"
       fingerprint: "7A9C33EDF1E5C271CD4BCCBB3C66CD9BA89C3A8A"
       state: "present"
-  "14":
+  "16":
     - key: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.3/repodata/repomd.xml.key"
       fingerprint: "7A9C33EDF1E5C271CD4BCCBB3C66CD9BA89C3A8A"
       state: "present"
-  "12":
+  "14":
     - key: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.3/repodata/repomd.xml.key"
       fingerprint: "7A9C33EDF1E5C271CD4BCCBB3C66CD9BA89C3A8A"
       state: "present"
@@ -40,7 +40,7 @@ _yum_repository:
       gpgcheck: true
       gpgkey: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.3/repodata/repomd.xml.key"
       state: "present"
-  "14":
+  "16":
     - file: "devel_languages_nodejs"
       name: "devel_languages_nodejs"
       description: "Node.js (openSUSE_Leap_15.3)"
@@ -51,7 +51,7 @@ _yum_repository:
       gpgcheck: true
       gpgkey: "http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_15.3/repodata/repomd.xml.key"
       state: "present"
-  "12":
+  "14":
     - file: "devel_languages_nodejs"
       name: "devel_languages_nodejs"
       description: "Node.js (openSUSE_Leap_15.3)"
@@ -69,13 +69,13 @@ _zypper:
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs17" }
     - { state: "latest", name: "npm17" }
+  "16":
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs16" }
+    - { state: "latest", name: "npm16" }
   "14":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs14" }
     - { state: "latest", name: "npm14" }
-  "12":
-    - { state: "latest", name: "gcc-c++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs12" }
-    - { state: "latest", name: "npm12" }
