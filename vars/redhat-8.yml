@@ -19,11 +19,11 @@ _rpm_key:
     - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
-  "14":
+  "16":
     - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
-  "12":
+  "14":
     - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
@@ -31,27 +31,27 @@ _rpm_key:
 _rpm_download:
   "17":
     - url: "http://rpm.nodesource.com/pub_17.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
+      dest: "/var/cache/ansible/ade84b4ff85c55b7a80cd4be8764188633ea10b799c192ceca2d3696cc8b5583/nodesource-release-el8-1.noarch.rpm"
+      checksum: "ade84b4ff85c55b7a80cd4be8764188633ea10b799c192ceca2d3696cc8b5583"
+  "16":
+    - url: "http://rpm.nodesource.com/pub_16.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
       dest: "/var/cache/ansible/89a841779f96b15e58667a11c278cd3675eb00d0dcc4be9ace816ccef44d7533/nodesource-release-el8-1.noarch.rpm"
       checksum: "89a841779f96b15e58667a11c278cd3675eb00d0dcc4be9ace816ccef44d7533"
   "14":
     - url: "http://rpm.nodesource.com/pub_14.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
       dest: "/var/cache/ansible/961a154058e4c507bf956cdd7070a64d684eeaff33457d7e645db396a7db4c3f/nodesource-release-el8-1.noarch.rpm"
       checksum: "961a154058e4c507bf956cdd7070a64d684eeaff33457d7e645db396a7db4c3f"
-  "12":
-    - url: "http://rpm.nodesource.com/pub_12.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
-      dest: "/var/cache/ansible/46d71c5c8c0b74fc7de7884416c7cac80d40745358cd6dc78019b53e00e14fbe/nodesource-release-el8-1.noarch.rpm"
-      checksum: "46d71c5c8c0b74fc7de7884416c7cac80d40745358cd6dc78019b53e00e14fbe"
 
 _yum:
   "17":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-  "14":
+  "16":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-  "12":
+  "14":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }

@@ -20,12 +20,12 @@ _apt_key:
       url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
       id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
       state: "present"
-  "14":
+  "16":
     - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
       url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
       id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
       state: "present"
-  "12":
+  "14":
     - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
       url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
       id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
@@ -36,13 +36,13 @@ _apt_repository:
     - filename: "nodesource"
       repo: "deb http://deb.nodesource.com/node_17.x bionic main"
       state: "present"
+  "16":
+    - filename: "nodesource"
+      repo: "deb http://deb.nodesource.com/node_16.x bionic main"
+      state: "present"
   "14":
     - filename: "nodesource"
       repo: "deb http://deb.nodesource.com/node_14.x bionic main"
-      state: "present"
-  "12":
-    - filename: "nodesource"
-      repo: "deb http://deb.nodesource.com/node_12.x bionic main"
       state: "present"
 
 _apt:
@@ -50,11 +50,11 @@ _apt:
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-  "14":
+  "16":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-  "12":
+  "14":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
