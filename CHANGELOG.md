@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Skip package upgrade before running molecule
   - Support Node.js 16
   - Remove Node.js 12 support
   - Support Fedora Rawhide
