@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Remove Ubuntu 21.04 support
   - Skip package upgrade before running molecule
   - Support Node.js 16
   - Remove Node.js 12 support
