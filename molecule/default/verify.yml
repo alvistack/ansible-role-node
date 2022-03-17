@@ -19,34 +19,34 @@
   become: true
   tasks:
     - name: node --version
-      command: node --version
+      ansible.builtin.command: node --version
       register: result
       changed_when: result is not succeeded
 
     - name: yarn --version
       environment:
         PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      command: yarn --version
+      ansible.builtin.command: yarn --version
       register: result
       changed_when: result is not succeeded
 
     - name: eslint --version
       environment:
         PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      command: eslint --version
+      ansible.builtin.command: eslint --version
       register: result
       changed_when: result is not succeeded
 
     - name: sass --version
       environment:
         PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      command: sass --version
+      ansible.builtin.command: sass --version
       register: result
       changed_when: result is not succeeded
 
     - name: prettier --version
       environment:
         PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      command: prettier --version
+      ansible.builtin.command: prettier --version
       register: result
       changed_when: result is not succeeded
