@@ -1,0 +1,57 @@
+---
+
+# (c) Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+_rpm_key:
+  "17":
+    - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
+      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
+      state: "present"
+  "16":
+    - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
+      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
+      state: "present"
+  "14":
+    - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
+      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
+      state: "present"
+
+_rpm_download:
+  "17":
+    - url: "http://rpm.nodesource.com/pub_17.x/el/9/x86_64/nodesource-release-el9-1.noarch.rpm"
+      dest: "/var/cache/ansible/dcd5d8465773909f84ad87dc5948300034e7416c4f65521c20b9e1ac10d92f6c/nodesource-release-el9-1.noarch.rpm"
+      checksum: "dcd5d8465773909f84ad87dc5948300034e7416c4f65521c20b9e1ac10d92f6c"
+  "16":
+    - url: "http://rpm.nodesource.com/pub_16.x/el/9/x86_64/nodesource-release-el9-1.noarch.rpm"
+      dest: "/var/cache/ansible/c689cce174973697b3721c05b13ec73a8f81accb09138cca673e85ec02c8a0db/nodesource-release-el9-1.noarch.rpm"
+      checksum: "c689cce174973697b3721c05b13ec73a8f81accb09138cca673e85ec02c8a0db"
+  "14":
+    - url: "http://rpm.nodesource.com/pub_14.x/el/9/x86_64/nodesource-release-el9-1.noarch.rpm"
+      dest: "/var/cache/ansible/78227bd1cdc73a5becda62fbf1246284c560df5208d8a44ef258751aabfb50bd/nodesource-release-el9-1.noarch.rpm"
+      checksum: "78227bd1cdc73a5becda62fbf1246284c560df5208d8a44ef258751aabfb50bd"
+
+_yum:
+  "17":
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+  "16":
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+  "14":
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
