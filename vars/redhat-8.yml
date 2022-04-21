@@ -15,7 +15,7 @@
 # limitations under the License.
 
 _rpm_key:
-  "17":
+  "18":
     - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
@@ -29,10 +29,10 @@ _rpm_key:
       state: "present"
 
 _rpm_download:
-  "17":
-    - url: "http://rpm.nodesource.com/pub_17.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
-      dest: "/var/cache/ansible/ade84b4ff85c55b7a80cd4be8764188633ea10b799c192ceca2d3696cc8b5583/nodesource-release-el8-1.noarch.rpm"
-      checksum: "ade84b4ff85c55b7a80cd4be8764188633ea10b799c192ceca2d3696cc8b5583"
+  "18":
+    - url: "http://rpm.nodesource.com/pub_18.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
+      dest: "/var/cache/ansible/37020ccd316e63409d6599c680e986e0fc30c3417cf2d20c4a8e52f49d3e4978/nodesource-release-el8-1.noarch.rpm"
+      checksum: "37020ccd316e63409d6599c680e986e0fc30c3417cf2d20c4a8e52f49d3e4978"
   "16":
     - url: "http://rpm.nodesource.com/pub_16.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
       dest: "/var/cache/ansible/89a841779f96b15e58667a11c278cd3675eb00d0dcc4be9ace816ccef44d7533/nodesource-release-el8-1.noarch.rpm"
@@ -43,7 +43,7 @@ _rpm_download:
       checksum: "961a154058e4c507bf956cdd7070a64d684eeaff33457d7e645db396a7db4c3f"
 
 _yum:
-  "17":
+  "18":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
