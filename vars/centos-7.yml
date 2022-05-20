@@ -32,7 +32,7 @@ _rpm_download:
   "18":
     - url: "http://rpm.nodesource.com/pub_18.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm"
       dest: "/var/cache/ansible/41d1ca6a84b53a79ec5fe041e4d70e1e414e0bf4b885a18cd6e7f63bb74edadc/nodesource-release-el7-1.noarch.rpm"
-      lhecksum: "41d1ca6a84b53a79ec5fe041e4d70e1e414e0bf4b885a18cd6e7f63bb74edadc"
+      checksum: "41d1ca6a84b53a79ec5fe041e4d70e1e414e0bf4b885a18cd6e7f63bb74edadc"
   "16":
     - url: "http://rpm.nodesource.com/pub_16.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm"
       dest: "/var/cache/ansible/ce79ceb9f6d9aba9bbd9ab64b4baa547c66bb9cc804848eb5e29a535e65092b5/nodesource-release-el7-1.noarch.rpm"
