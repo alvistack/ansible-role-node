@@ -17,8 +17,5 @@
 # NodeJS release.
 node_release: "16"
 
-# Specify NPM pacakge.
-npm: "{{ _npm }}"
-
 # Specify Yarn pacakge.
 yarn: "{{ _yarn }}"

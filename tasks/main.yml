@@ -63,12 +63,25 @@
   loop:
     - { dest: "/etc/bash_completion.d" }
 
-- name: npm install --global
-  npm:
-    name: "{{ item.name }}"
-    state: "{{ item.state }}"
+- name: npm install --global yarn
+  community.general.npm:
+    name: "yarn"
+    state: "latest"
     global: true
-  loop: "{{ npm }}"
+  when:
+    - node_release < "16"
+  register: result
+  until: result is succeeded
+  changed_when: result is not succeeded
+
+- name: corepack enable
+  ansible.builtin.shell: |
+    set -euxo pipefail
+    corepack enable
+  args:
+    executable: "/bin/bash"
+  when:
+    - node_release >= "16"
   register: result
   until: result is succeeded
   changed_when: result is not succeeded
@@ -76,7 +89,7 @@
 - name: yarn global add
   environment:
     PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-  yarn:
+  community.general.yarn:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
     global: true
