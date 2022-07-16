@@ -86,18 +86,6 @@
   until: result is succeeded
   changed_when: result is not succeeded
 
-- name: yarn global add
-  environment:
-    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-  community.general.yarn:
-    name: "{{ item.name }}"
-    state: "{{ item.state }}"
-    global: true
-  loop: "{{ yarn }}"
-  register: result
-  until: result is succeeded
-  changed_when: result is not succeeded
-
 - name: copy templates
   ansible.builtin.template:
     dest: "{{ item.dest }}"

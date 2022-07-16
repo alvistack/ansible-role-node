@@ -16,16 +16,28 @@
 
 _apt_key:
   "18":
+    - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
+      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_11/Release.key"
+      id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
+      state: "present"
     - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
       url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
       id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
       state: "present"
   "16":
+    - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
+      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_11/Release.key"
+      id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
+      state: "present"
     - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
       url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
       id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
       state: "present"
   "14":
+    - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
+      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_11/Release.key"
+      id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
+      state: "present"
     - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
       url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
       id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
@@ -33,14 +45,23 @@ _apt_key:
 
 _apt_repository:
   "18":
+    - filename: "home:alvistack"
+      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_11/ /"
+      state: "present"
     - filename: "nodesource"
       repo: "deb http://deb.nodesource.com/node_18.x bullseye main"
       state: "present"
   "16":
+    - filename: "home:alvistack"
+      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_11/ /"
+      state: "present"
     - filename: "nodesource"
       repo: "deb http://deb.nodesource.com/node_16.x bullseye main"
       state: "present"
   "14":
+    - filename: "home:alvistack"
+      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_11/ /"
+      state: "present"
     - filename: "nodesource"
       repo: "deb http://deb.nodesource.com/node_14.x bullseye main"
       state: "present"
@@ -50,11 +71,26 @@ _apt:
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
+    - { state: "latest", name: "node-eslint" }
+    - { state: "latest", name: "node-prettier" }
+    - { state: "latest", name: "node-sass" }
+    - { state: "latest", name: "node-stylelint" }
+    - { state: "latest", name: "node-uglify-js" }
   "16":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
+    - { state: "latest", name: "node-eslint" }
+    - { state: "latest", name: "node-prettier" }
+    - { state: "latest", name: "node-sass" }
+    - { state: "latest", name: "node-stylelint" }
+    - { state: "latest", name: "node-uglify-js" }
   "14":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
+    - { state: "latest", name: "node-eslint" }
+    - { state: "latest", name: "node-prettier" }
+    - { state: "latest", name: "node-sass" }
+    - { state: "latest", name: "node-stylelint" }
+    - { state: "latest", name: "node-uglify-js" }
