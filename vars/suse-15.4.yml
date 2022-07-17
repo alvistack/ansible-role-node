@@ -108,28 +108,28 @@ _zypper:
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs18" }
     - { state: "latest", name: "npm18" }
-    - { state: "latest", name: "nodejs-eslint" }
-    - { state: "latest", name: "nodejs-prettier" }
-    - { state: "latest", name: "nodejs-sass" }
-    - { state: "latest", name: "nodejs-stylelint" }
-    - { state: "latest", name: "nodejs-uglify-js" }
+    - { state: "latest", name: "eslint" }
+    - { state: "latest", name: "prettier" }
+    - { state: "latest", name: "sass" }
+    - { state: "latest", name: "stylelint" }
+    - { state: "latest", name: "uglifyjs" }
   "16":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs16" }
     - { state: "latest", name: "npm16" }
-    - { state: "latest", name: "nodejs-eslint" }
-    - { state: "latest", name: "nodejs-prettier" }
-    - { state: "latest", name: "nodejs-sass" }
-    - { state: "latest", name: "nodejs-stylelint" }
-    - { state: "latest", name: "nodejs-uglify-js" }
+    - { state: "latest", name: "eslint" }
+    - { state: "latest", name: "prettier" }
+    - { state: "latest", name: "sass" }
+    - { state: "latest", name: "stylelint" }
+    - { state: "latest", name: "uglifyjs" }
   "14":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs14" }
     - { state: "latest", name: "npm14" }
-    - { state: "latest", name: "nodejs-eslint" }
-    - { state: "latest", name: "nodejs-prettier" }
-    - { state: "latest", name: "nodejs-sass" }
-    - { state: "latest", name: "nodejs-stylelint" }
-    - { state: "latest", name: "nodejs-uglify-js" }
+    - { state: "latest", name: "eslint" }
+    - { state: "latest", name: "prettier" }
+    - { state: "latest", name: "sass" }
+    - { state: "latest", name: "stylelint" }
+    - { state: "latest", name: "uglifyjs" }

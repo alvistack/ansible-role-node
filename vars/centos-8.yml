@@ -91,26 +91,26 @@ _yum:
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-    - { state: "latest", name: "nodejs-eslint" }
-    - { state: "latest", name: "nodejs-prettier" }
-    - { state: "latest", name: "nodejs-sass" }
-    - { state: "latest", name: "nodejs-stylelint" }
-    - { state: "latest", name: "nodejs-uglify-js" }
+    - { state: "latest", name: "eslint" }
+    - { state: "latest", name: "prettier" }
+    - { state: "latest", name: "sass" }
+    - { state: "latest", name: "stylelint" }
+    - { state: "latest", name: "uglifyjs" }
   "16":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-    - { state: "latest", name: "nodejs-eslint" }
-    - { state: "latest", name: "nodejs-prettier" }
-    - { state: "latest", name: "nodejs-sass" }
-    - { state: "latest", name: "nodejs-stylelint" }
-    - { state: "latest", name: "nodejs-uglify-js" }
+    - { state: "latest", name: "eslint" }
+    - { state: "latest", name: "prettier" }
+    - { state: "latest", name: "sass" }
+    - { state: "latest", name: "stylelint" }
+    - { state: "latest", name: "uglifyjs" }
   "14":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-    - { state: "latest", name: "nodejs-eslint" }
-    - { state: "latest", name: "nodejs-prettier" }
-    - { state: "latest", name: "nodejs-sass" }
-    - { state: "latest", name: "nodejs-stylelint" }
-    - { state: "latest", name: "nodejs-uglify-js" }
+    - { state: "latest", name: "eslint" }
+    - { state: "latest", name: "prettier" }
+    - { state: "latest", name: "sass" }
+    - { state: "latest", name: "stylelint" }
+    - { state: "latest", name: "uglifyjs" }

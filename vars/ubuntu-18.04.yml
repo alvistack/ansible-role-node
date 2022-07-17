@@ -71,26 +71,26 @@ _apt:
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-    - { state: "latest", name: "node-eslint" }
-    - { state: "latest", name: "node-prettier" }
-    - { state: "latest", name: "node-sass" }
-    - { state: "latest", name: "node-stylelint" }
-    - { state: "latest", name: "node-uglify-js" }
+    - { state: "latest", name: "eslint" }
+    - { state: "latest", name: "prettier" }
+    - { state: "latest", name: "sass" }
+    - { state: "latest", name: "stylelint" }
+    - { state: "latest", name: "uglifyjs" }
   "16":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-    - { state: "latest", name: "node-eslint" }
-    - { state: "latest", name: "node-prettier" }
-    - { state: "latest", name: "node-sass" }
-    - { state: "latest", name: "node-stylelint" }
-    - { state: "latest", name: "node-uglify-js" }
+    - { state: "latest", name: "eslint" }
+    - { state: "latest", name: "prettier" }
+    - { state: "latest", name: "sass" }
+    - { state: "latest", name: "stylelint" }
+    - { state: "latest", name: "uglifyjs" }
   "14":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
-    - { state: "latest", name: "node-eslint" }
-    - { state: "latest", name: "node-prettier" }
-    - { state: "latest", name: "node-sass" }
-    - { state: "latest", name: "node-stylelint" }
-    - { state: "latest", name: "node-uglify-js" }
+    - { state: "latest", name: "eslint" }
+    - { state: "latest", name: "prettier" }
+    - { state: "latest", name: "sass" }
+    - { state: "latest", name: "stylelint" }
+    - { state: "latest", name: "uglifyjs" }
