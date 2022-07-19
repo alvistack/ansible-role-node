@@ -13,13 +13,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-_yarn:
-  - { state: "latest", name: "eslint" }
-  - { state: "latest", name: "prettier" }
-  - { state: "latest", name: "sass" }
-  - { state: "latest", name: "stylelint" }
-  - { state: "latest", name: "stylelint-config-standard" }
-  - { state: "latest", name: "stylelint-csstree-validator" }
-  - { state: "latest", name: "stylelint-scss" }
-  - { state: "latest", name: "uglify-js" }

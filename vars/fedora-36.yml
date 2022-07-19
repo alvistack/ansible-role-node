@@ -16,14 +16,23 @@
 
 _rpm_key:
   "18":
+    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_36/repodata/repomd.xml.key"
+      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
+      state: "present"
     - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
   "16":
+    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_36/repodata/repomd.xml.key"
+      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
+      state: "present"
     - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
   "14":
+    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_36/repodata/repomd.xml.key"
+      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
+      state: "present"
     - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
       fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
       state: "present"
@@ -41,6 +50,41 @@ _rpm_download:
     - url: "http://rpm.nodesource.com/pub_14.x/fc/36/x86_64/nodesource-release-fc36-1.noarch.rpm"
       dest: "/var/cache/ansible/b1432ac80c0b81dbc7baf75c36836930dbdf4ff0fac160df6213beb1f2d09243/nodesource-release-fc36-1.noarch.rpm"
       checksum: "83d2115b1861523c259c1dbcddd787ac38cb44f0dd4a8a23b844f1d440a8f0a3"
+
+_yum_repository:
+  "18":
+    - file: "home:alvistack"
+      name: "home_alvistack"
+      description: "home:alvistack (Fedora_36)"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_36"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_36/repodata/repomd.xml.key"
+      state: "present"
+  "16":
+    - file: "home:alvistack"
+      name: "home_alvistack"
+      description: "home:alvistack (Fedora_36)"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_36"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_36/repodata/repomd.xml.key"
+      state: "present"
+  "14":
+    - file: "home:alvistack"
+      name: "home_alvistack"
+      description: "home:alvistack (Fedora_36)"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_36"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_36/repodata/repomd.xml.key"
+      state: "present"
 
 _yum:
   "18":

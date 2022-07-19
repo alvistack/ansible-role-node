@@ -4,7 +4,9 @@
 
 ### Major Changes
 
-## 6.1.0 - TBC
+  - Revamp yarn related with OBS repo
+
+## 6.1.0 - 2022-07-14
 
 ### Major Changes
 
