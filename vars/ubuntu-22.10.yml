@@ -49,21 +49,21 @@ _apt_repository:
       repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_22.10/ /"
       state: "present"
     - filename: "nodesource"
-      repo: "deb http://deb.nodesource.com/node_18.x impish main"
+      repo: "deb http://deb.nodesource.com/node_18.x jammy main"
       state: "present"
   "16":
     - filename: "home:alvistack"
       repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_22.10/ /"
       state: "present"
     - filename: "nodesource"
-      repo: "deb http://deb.nodesource.com/node_16.x impish main"
+      repo: "deb http://deb.nodesource.com/node_16.x jammy main"
       state: "present"
   "14":
     - filename: "home:alvistack"
       repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_22.10/ /"
       state: "present"
     - filename: "nodesource"
-      repo: "deb http://deb.nodesource.com/node_14.x impish main"
+      repo: "deb http://deb.nodesource.com/node_14.x jammy main"
       state: "present"
 
 _apt:
