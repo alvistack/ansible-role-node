@@ -63,29 +63,6 @@
   loop:
     - { dest: "/etc/bash_completion.d" }
 
-- name: npm install --global yarn
-  community.general.npm:
-    name: "yarn"
-    state: "latest"
-    global: true
-  when:
-    - node_release < "16"
-  register: result
-  until: result is succeeded
-  changed_when: result is not succeeded
-
-- name: corepack enable
-  ansible.builtin.shell: |
-    set -euxo pipefail
-    corepack enable
-  args:
-    executable: "/bin/bash"
-  when:
-    - node_release >= "16"
-  register: result
-  until: result is succeeded
-  changed_when: result is not succeeded
-
 - name: copy templates
   ansible.builtin.template:
     dest: "{{ item.dest }}"

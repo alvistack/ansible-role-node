@@ -15,4 +15,4 @@
 # limitations under the License.
 
 # NodeJS release.
-node_release: "18"
+node_release: "{{ _node_release }}"
