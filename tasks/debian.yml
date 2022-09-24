@@ -34,6 +34,16 @@
   register: result
   until: result is succeeded
 
+- name: copy templates
+  ansible.builtin.template:
+    dest: "{{ item.dest }}"
+    src: "{{ item.src | default('./templates' + item.dest + '.j2') }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0644') }}"
+  loop:
+    - { dest: "/etc/apt/preferences.d/99-nodesource.pref" }
+
 - name: apt-get install
   ansible.builtin.apt:
     name: "{{ item.name }}"
@@ -41,3 +51,26 @@
   loop: "{{ _apt[node_release] }}"
   register: result
   until: result is succeeded
+
+- name: npm install --global yarn
+  community.general.npm:
+    name: "yarn"
+    state: "latest"
+    global: true
+  when:
+    - node_release < "16"
+  register: result
+  until: result is succeeded
+  changed_when: result is not succeeded
+
+- name: corepack enable
+  ansible.builtin.shell: |
+    set -euxo pipefail
+    corepack enable
+  args:
+    executable: "/bin/bash"
+  when:
+    - node_release >= "16"
+  register: result
+  until: result is succeeded
+  changed_when: result is not succeeded

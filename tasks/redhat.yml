@@ -74,6 +74,30 @@
   ansible.builtin.yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
+    disablerepo: "{{ item.disablerepo | default(None) or omit }}"
   loop: "{{ _yum[node_release] }}"
   register: result
   until: result is succeeded
+
+- name: npm install --global yarn
+  community.general.npm:
+    name: "yarn"
+    state: "latest"
+    global: true
+  when:
+    - node_release < "16"
+  register: result
+  until: result is succeeded
+  changed_when: result is not succeeded
+
+- name: corepack enable
+  ansible.builtin.shell: |
+    set -euxo pipefail
+    corepack enable
+  args:
+    executable: "/bin/bash"
+  when:
+    - node_release >= "16"
+  register: result
+  until: result is succeeded
+  changed_when: result is not succeeded
