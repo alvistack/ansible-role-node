@@ -20,48 +20,43 @@
   become: true
   tasks:
     - name: node --version
-      ansible.builtin.command: node --version
+      ansible.builtin.command:
+        cmd: node --version
       register: result
       changed_when: result is not succeeded
 
     - name: yarn --version
-      environment:
-        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      ansible.builtin.command: yarn --version
+      ansible.builtin.command:
+        cmd: yarn --version
       register: result
       changed_when: result is not succeeded
 
     - name: eslint --version
-      environment:
-        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      ansible.builtin.command: eslint --version
+      ansible.builtin.command:
+        cmd: eslint --version
       register: result
       changed_when: result is not succeeded
 
     - name: sass --version
-      environment:
-        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      ansible.builtin.command: sass --version
+      ansible.builtin.command:
+        cmd: sass --version
       register: result
       changed_when: result is not succeeded
 
     - name: prettier --version
-      environment:
-        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      ansible.builtin.command: prettier --version
+      ansible.builtin.command:
+        cmd: prettier --version
       register: result
       changed_when: result is not succeeded
 
     - name: uglifyjs --version
-      environment:
-        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      ansible.builtin.command: uglifyjs --version
+      ansible.builtin.command:
+        cmd: uglifyjs --version
       register: result
       changed_when: result is not succeeded
 
     - name: stylelint --version
-      environment:
-        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      ansible.builtin.command: stylelint --version
+      ansible.builtin.command:
+        cmd: stylelint --version
       register: result
       changed_when: result is not succeeded
