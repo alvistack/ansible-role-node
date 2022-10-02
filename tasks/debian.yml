@@ -64,9 +64,10 @@
   changed_when: result is not succeeded
 
 - name: corepack enable
-  ansible.builtin.shell: |
-    set -euxo pipefail
-    corepack enable
+  ansible.builtin.shell:
+    cmd: |
+      set -euxo pipefail
+      corepack enable
   args:
     executable: "/bin/bash"
   when:
