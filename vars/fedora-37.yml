@@ -1,6 +1,6 @@
 ---
 
-# (c) Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+# Copyright 2022 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -41,17 +41,17 @@ _rpm_key:
 
 _rpm_download:
   "18":
-    - url: "http://rpm.nodesource.com/pub_18.x/fc/36/x86_64/nodesource-release-fc36-1.noarch.rpm"
-      dest: "/var/cache/ansible/f0194af082599b51d5bf4799660611fe718c2038d5ea408950f878924cd1428d/nodesource-release-fc36-1.noarch.rpm"
-      checksum: "f0194af082599b51d5bf4799660611fe718c2038d5ea408950f878924cd1428d"
+    - url: "http://rpm.nodesource.com/pub_18.x/fc/37/x86_64/nodesource-release-fc37-1.noarch.rpm"
+      dest: "/var/cache/ansible/8901849bb022d99789ebcb4e03d7938b3366e385e496ddd48aae4c0fced2f863/nodesource-release-fc37-1.noarch.rpm"
+      checksum: "8901849bb022d99789ebcb4e03d7938b3366e385e496ddd48aae4c0fced2f863"
   "16":
-    - url: "http://rpm.nodesource.com/pub_16.x/fc/36/x86_64/nodesource-release-fc36-1.noarch.rpm"
-      dest: "/var/cache/ansible/07a5d078f4da350e139ef2dbe7677fe200e57628ac643d2df55f1c4b45c23455/nodesource-release-fc36-1.noarch.rpm"
-      checksum: "07a5d078f4da350e139ef2dbe7677fe200e57628ac643d2df55f1c4b45c23455"
+    - url: "http://rpm.nodesource.com/pub_16.x/fc/37/x86_64/nodesource-release-fc37-1.noarch.rpm"
+      dest: "/var/cache/ansible/9d243d5d77436e79cef77a37a1aad7a5b96a3ad708775cb607b9749925358b9d/nodesource-release-fc37-1.noarch.rpm"
+      checksum: "9d243d5d77436e79cef77a37a1aad7a5b96a3ad708775cb607b9749925358b9d"
   "14":
-    - url: "http://rpm.nodesource.com/pub_14.x/fc/36/x86_64/nodesource-release-fc36-1.noarch.rpm"
-      dest: "/var/cache/ansible/b1432ac80c0b81dbc7baf75c36836930dbdf4ff0fac160df6213beb1f2d09243/nodesource-release-fc36-1.noarch.rpm"
-      checksum: "83d2115b1861523c259c1dbcddd787ac38cb44f0dd4a8a23b844f1d440a8f0a3"
+    - url: "http://rpm.nodesource.com/pub_14.x/fc/37/x86_64/nodesource-release-fc37-1.noarch.rpm"
+      dest: "/var/cache/ansible/b1432ac80c0b81dbc7baf75c36836930dbdf4ff0fac160df6213beb1f2d09243/nodesource-release-fc37-1.noarch.rpm"
+      checksum: "70d6666ee1b449d4150ab2640df6124de63835279021e9eb05dffb28ad35316a"
 
 _yum_repository:
   "18":
