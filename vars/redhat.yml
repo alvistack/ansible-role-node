@@ -50,7 +50,7 @@ _rpm_download:
       checksum: "9d243d5d77436e79cef77a37a1aad7a5b96a3ad708775cb607b9749925358b9d"
   "14":
     - url: "http://rpm.nodesource.com/pub_14.x/fc/37/x86_64/nodesource-release-fc37-1.noarch.rpm"
-      dest: "/var/cache/ansible/b1432ac80c0b81dbc7baf75c36836930dbdf4ff0fac160df6213beb1f2d09243/nodesource-release-fc37-1.noarch.rpm"
+      dest: "/var/cache/ansible/70d6666ee1b449d4150ab2640df6124de63835279021e9eb05dffb28ad35316a/nodesource-release-fc37-1.noarch.rpm"
       checksum: "70d6666ee1b449d4150ab2640df6124de63835279021e9eb05dffb28ad35316a"
 
 _yum_repository:
