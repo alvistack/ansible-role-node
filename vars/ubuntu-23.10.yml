@@ -19,7 +19,7 @@ _node_release: "18"
 _apt_key:
   "18":
     - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
-      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.04/Release.key"
+      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/Release.key"
       id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
     - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
@@ -28,7 +28,7 @@ _apt_key:
       state: "present"
   "16":
     - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
-      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.04/Release.key"
+      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/Release.key"
       id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
     - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
@@ -37,7 +37,7 @@ _apt_key:
       state: "present"
   "14":
     - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
-      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.04/Release.key"
+      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/Release.key"
       id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
     - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
@@ -48,21 +48,21 @@ _apt_key:
 _apt_repository:
   "18":
     - filename: "home:alvistack"
-      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.04/ /"
+      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/ /"
       state: "present"
     - filename: "nodesource"
       repo: "deb http://deb.nodesource.com/node_18.x jammy main"
       state: "present"
   "16":
     - filename: "home:alvistack"
-      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.04/ /"
+      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/ /"
       state: "present"
     - filename: "nodesource"
       repo: "deb http://deb.nodesource.com/node_16.x jammy main"
       state: "present"
   "14":
     - filename: "home:alvistack"
-      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.04/ /"
+      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/ /"
       state: "present"
     - filename: "nodesource"
       repo: "deb http://deb.nodesource.com/node_14.x jammy main"
