@@ -2,6 +2,9 @@
 
 ## 9.2.0 - TBC
 
+-   Support Node.js 20
+-   Remove Node.js 16 support
+-   Remove Node.js 14 support
 -   Remove Ubuntu 23.04 support
 
 ## 9.1.0 - 2023-12-25

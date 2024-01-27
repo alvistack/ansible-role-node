@@ -14,28 +14,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_node_release: "18"
+_node_release: "20"
 
 _apt_key:
+  "20":
+    - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
+      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/Release.key"
+      id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
+      state: "present"
+    - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
+      url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+      id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
+      state: "present"
   "18":
-    - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
-      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/Release.key"
-      id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
-      state: "present"
-    - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
-      url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
-      id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
-      state: "present"
-  "16":
-    - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
-      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/Release.key"
-      id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
-      state: "present"
-    - keyring: "/etc/apt/trusted.gpg.d/nodesource.gpg"
-      url: "http://deb.nodesource.com/gpgkey/nodesource.gpg.key"
-      id: "9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280"
-      state: "present"
-  "14":
     - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
       url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/Release.key"
       id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
@@ -46,6 +37,13 @@ _apt_key:
       state: "present"
 
 _apt_repository:
+  "20":
+    - filename: "home:alvistack"
+      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/ /"
+      state: "present"
+    - filename: "nodesource"
+      repo: "deb http://deb.nodesource.com/node_20.x jammy main"
+      state: "present"
   "18":
     - filename: "home:alvistack"
       repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/ /"
@@ -53,41 +51,18 @@ _apt_repository:
     - filename: "nodesource"
       repo: "deb http://deb.nodesource.com/node_18.x jammy main"
       state: "present"
-  "16":
-    - filename: "home:alvistack"
-      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/ /"
-      state: "present"
-    - filename: "nodesource"
-      repo: "deb http://deb.nodesource.com/node_16.x jammy main"
-      state: "present"
-  "14":
-    - filename: "home:alvistack"
-      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/ /"
-      state: "present"
-    - filename: "nodesource"
-      repo: "deb http://deb.nodesource.com/node_14.x jammy main"
-      state: "present"
 
 _apt:
+  "20":
+    - { state: "latest", name: "g++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs" }
+    - { state: "latest", name: "eslint" }
+    - { state: "latest", name: "prettier" }
+    - { state: "latest", name: "sass" }
+    - { state: "latest", name: "stylelint" }
+    - { state: "latest", name: "uglifyjs" }
   "18":
-    - { state: "latest", name: "g++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs" }
-    - { state: "latest", name: "eslint" }
-    - { state: "latest", name: "prettier" }
-    - { state: "latest", name: "sass" }
-    - { state: "latest", name: "stylelint" }
-    - { state: "latest", name: "uglifyjs" }
-  "16":
-    - { state: "latest", name: "g++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs" }
-    - { state: "latest", name: "eslint" }
-    - { state: "latest", name: "prettier" }
-    - { state: "latest", name: "sass" }
-    - { state: "latest", name: "stylelint" }
-    - { state: "latest", name: "uglifyjs" }
-  "14":
     - { state: "latest", name: "g++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs" }
