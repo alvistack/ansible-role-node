@@ -14,24 +14,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_node_release: "18"
+_node_release: "20"
 
 _rpm_key:
+  "20":
+    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_8_Stream/repodata/repomd.xml.key"
+      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
+      state: "present"
+    - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
+      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
+      state: "present"
   "18":
-    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_8_Stream/repodata/repomd.xml.key"
-      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
-      state: "present"
-    - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
-      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
-      state: "present"
-  "16":
-    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_8_Stream/repodata/repomd.xml.key"
-      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
-      state: "present"
-    - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
-      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
-      state: "present"
-  "14":
     - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_8_Stream/repodata/repomd.xml.key"
       fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
@@ -40,43 +33,28 @@ _rpm_key:
       state: "present"
 
 _rpm_download:
+  "20":
+    - url: "http://rpm.nodesource.com/pub_20.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
+      dest: "/var/cache/ansible/bf2dab819e53b538fa70573c1ebdaf5db5f59444246792c14db35e454aa41fcd/nodesource-release-el8-1.noarch.rpm"
+      checksum: "bf2dab819e53b538fa70573c1ebdaf5db5f59444246792c14db35e454aa41fcd"
   "18":
     - url: "http://rpm.nodesource.com/pub_18.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
       dest: "/var/cache/ansible/37020ccd316e63409d6599c680e986e0fc30c3417cf2d20c4a8e52f49d3e4978/nodesource-release-el8-1.noarch.rpm"
       checksum: "37020ccd316e63409d6599c680e986e0fc30c3417cf2d20c4a8e52f49d3e4978"
-  "16":
-    - url: "http://rpm.nodesource.com/pub_16.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
-      dest: "/var/cache/ansible/89a841779f96b15e58667a11c278cd3675eb00d0dcc4be9ace816ccef44d7533/nodesource-release-el8-1.noarch.rpm"
-      checksum: "89a841779f96b15e58667a11c278cd3675eb00d0dcc4be9ace816ccef44d7533"
-  "14":
-    - url: "http://rpm.nodesource.com/pub_14.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm"
-      dest: "/var/cache/ansible/961a154058e4c507bf956cdd7070a64d684eeaff33457d7e645db396a7db4c3f/nodesource-release-el8-1.noarch.rpm"
-      checksum: "961a154058e4c507bf956cdd7070a64d684eeaff33457d7e645db396a7db4c3f"
 
 _yum_repository:
+  "20":
+    - file: "home:alvistack"
+      name: "home_alvistack"
+      description: "home:alvistack (CentOS_8_Stream)"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_8_Stream"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_8_Stream/repodata/repomd.xml.key"
+      state: "present"
   "18":
-    - file: "home:alvistack"
-      name: "home_alvistack"
-      description: "home:alvistack (CentOS_8_Stream)"
-      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_8_Stream"
-      enabled: true
-      priority: "2"
-      module_hotfixes: true
-      gpgcheck: true
-      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_8_Stream/repodata/repomd.xml.key"
-      state: "present"
-  "16":
-    - file: "home:alvistack"
-      name: "home_alvistack"
-      description: "home:alvistack (CentOS_8_Stream)"
-      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_8_Stream"
-      enabled: true
-      priority: "2"
-      module_hotfixes: true
-      gpgcheck: true
-      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_8_Stream/repodata/repomd.xml.key"
-      state: "present"
-  "14":
     - file: "home:alvistack"
       name: "home_alvistack"
       description: "home:alvistack (CentOS_8_Stream)"
@@ -89,25 +67,16 @@ _yum_repository:
       state: "present"
 
 _yum:
+  "20":
+    - { state: "latest", name: "gcc-c++" }
+    - { state: "latest", name: "make" }
+    - { state: "latest", name: "nodejs", disablerepo: "appstream" }
+    - { state: "latest", name: "eslint" }
+    - { state: "latest", name: "prettier" }
+    - { state: "latest", name: "sass" }
+    - { state: "latest", name: "stylelint" }
+    - { state: "latest", name: "uglifyjs" }
   "18":
-    - { state: "latest", name: "gcc-c++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs", disablerepo: "appstream" }
-    - { state: "latest", name: "eslint" }
-    - { state: "latest", name: "prettier" }
-    - { state: "latest", name: "sass" }
-    - { state: "latest", name: "stylelint" }
-    - { state: "latest", name: "uglifyjs" }
-  "16":
-    - { state: "latest", name: "gcc-c++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs", disablerepo: "appstream" }
-    - { state: "latest", name: "eslint" }
-    - { state: "latest", name: "prettier" }
-    - { state: "latest", name: "sass" }
-    - { state: "latest", name: "stylelint" }
-    - { state: "latest", name: "uglifyjs" }
-  "14":
     - { state: "latest", name: "gcc-c++" }
     - { state: "latest", name: "make" }
     - { state: "latest", name: "nodejs", disablerepo: "appstream" }
