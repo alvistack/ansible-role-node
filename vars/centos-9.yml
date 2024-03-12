@@ -18,70 +18,70 @@ _node_release: "20"
 
 _rpm_key:
   "20":
-    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/AlmaLinux_9/repodata/repomd.xml.key"
-      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
-      state: "present"
-    - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
-      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
-      state: "present"
+    - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/AlmaLinux_9/repodata/repomd.xml.key
+      fingerprint: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
+      state: present
+    - key: http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
+      fingerprint: 2E55207A95D9944B0CC932615DDBE8D434FA74DD
+      state: present
   "18":
-    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/AlmaLinux_9/repodata/repomd.xml.key"
-      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
-      state: "present"
-    - key: "http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
-      fingerprint: "2E55207A95D9944B0CC932615DDBE8D434FA74DD"
-      state: "present"
+    - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/AlmaLinux_9/repodata/repomd.xml.key
+      fingerprint: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
+      state: present
+    - key: http://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
+      fingerprint: 2E55207A95D9944B0CC932615DDBE8D434FA74DD
+      state: present
 
 _rpm_download:
   "20":
-    - url: "http://rpm.nodesource.com/pub_20.x/el/9/x86_64/nodesource-release-el9-1.noarch.rpm"
-      dest: "/var/cache/ansible/e7b7fe3ed02b64a9d20b79fbcb2ffa0a1c777777ec7bc99498b50d91b166778a/nodesource-release-el9-1.noarch.rpm"
-      checksum: "e7b7fe3ed02b64a9d20b79fbcb2ffa0a1c777777ec7bc99498b50d91b166778a"
+    - url: http://rpm.nodesource.com/pub_20.x/el/9/x86_64/nodesource-release-el9-1.noarch.rpm
+      dest: /var/cache/ansible/e7b7fe3ed02b64a9d20b79fbcb2ffa0a1c777777ec7bc99498b50d91b166778a/nodesource-release-el9-1.noarch.rpm
+      checksum: e7b7fe3ed02b64a9d20b79fbcb2ffa0a1c777777ec7bc99498b50d91b166778a
   "18":
-    - url: "http://rpm.nodesource.com/pub_18.x/el/9/x86_64/nodesource-release-el9-1.noarch.rpm"
-      dest: "/var/cache/ansible/65e62a50f0fcf5169eb761cafa19fded7b8b595cf51af7382844bf2335155894/nodesource-release-el9-1.noarch.rpm"
-      checksum: "65e62a50f0fcf5169eb761cafa19fded7b8b595cf51af7382844bf2335155894"
+    - url: http://rpm.nodesource.com/pub_18.x/el/9/x86_64/nodesource-release-el9-1.noarch.rpm
+      dest: /var/cache/ansible/65e62a50f0fcf5169eb761cafa19fded7b8b595cf51af7382844bf2335155894/nodesource-release-el9-1.noarch.rpm
+      checksum: 65e62a50f0fcf5169eb761cafa19fded7b8b595cf51af7382844bf2335155894
 
 _yum_repository:
   "20":
-    - file: "home:alvistack"
-      name: "home_alvistack"
-      description: "home:alvistack (AlmaLinux_9)"
-      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/AlmaLinux_9"
+    - file: home:alvistack
+      name: home_alvistack
+      description: home:alvistack (AlmaLinux_9)
+      baseurl: http://downloadcontent.opensuse.org/repositories/home:/alvistack/AlmaLinux_9
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/AlmaLinux_9/repodata/repomd.xml.key"
-      state: "present"
+      gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/AlmaLinux_9/repodata/repomd.xml.key
+      state: present
   "18":
-    - file: "home:alvistack"
-      name: "home_alvistack"
-      description: "home:alvistack (AlmaLinux_9)"
-      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/AlmaLinux_9"
+    - file: home:alvistack
+      name: home_alvistack
+      description: home:alvistack (AlmaLinux_9)
+      baseurl: http://downloadcontent.opensuse.org/repositories/home:/alvistack/AlmaLinux_9
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/AlmaLinux_9/repodata/repomd.xml.key"
-      state: "present"
+      gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/AlmaLinux_9/repodata/repomd.xml.key
+      state: present
 
 _yum:
   "20":
-    - { state: "latest", name: "gcc-c++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs", disablerepo: "appstream" }
-    - { state: "latest", name: "eslint" }
-    - { state: "latest", name: "prettier" }
-    - { state: "latest", name: "sass" }
-    - { state: "latest", name: "stylelint" }
-    - { state: "latest", name: "uglifyjs" }
+    - { state: latest, name: gcc-c++ }
+    - { state: latest, name: make }
+    - { state: latest, name: nodejs, disablerepo: appstream }
+    - { state: latest, name: eslint }
+    - { state: latest, name: prettier }
+    - { state: latest, name: sass }
+    - { state: latest, name: stylelint }
+    - { state: latest, name: uglifyjs }
   "18":
-    - { state: "latest", name: "gcc-c++" }
-    - { state: "latest", name: "make" }
-    - { state: "latest", name: "nodejs", disablerepo: "appstream" }
-    - { state: "latest", name: "eslint" }
-    - { state: "latest", name: "prettier" }
-    - { state: "latest", name: "sass" }
-    - { state: "latest", name: "stylelint" }
-    - { state: "latest", name: "uglifyjs" }
+    - { state: latest, name: gcc-c++ }
+    - { state: latest, name: make }
+    - { state: latest, name: nodejs, disablerepo: appstream }
+    - { state: latest, name: eslint }
+    - { state: latest, name: prettier }
+    - { state: latest, name: sass }
+    - { state: latest, name: stylelint }
+    - { state: latest, name: uglifyjs }

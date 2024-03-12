@@ -1,5 +1,4 @@
 ---
-
 # Copyright 2024 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +15,7 @@
 
 - name: rpm --import
   vars:
-    ansible_python_interpreter: "python3"
+    ansible_python_interpreter: python3
   ansible.builtin.rpm_key:
     key: "{{ item.key }}"
     fingerprint: "{{ item.fingerprint }}"
@@ -42,7 +41,7 @@
 
 - name: zypper install
   vars:
-    ansible_python_interpreter: "python3"
+    ansible_python_interpreter: python3
   community.general.zypper:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
@@ -60,17 +59,17 @@
     state: "{{ item.state | default('link') }}"
     follow: false
   loop:
-    - src: "/usr/lib64/node_modules/corepack{{ node_release }}"
-      dest: "/usr/lib64/node_modules/corepack"
+    - src: /usr/lib64/node_modules/corepack{{ node_release }}
+      dest: /usr/lib64/node_modules/corepack
       mode: "0755"
-    - src: "/usr/bin/corepack{{ node_release }}"
-      dest: "/usr/bin/corepack"
+    - src: /usr/bin/corepack{{ node_release }}
+      dest: /usr/bin/corepack
       mode: "0755"
 
 - name: npm install --global yarn
   community.general.npm:
-    name: "yarn"
-    state: "latest"
+    name: yarn
+    state: latest
     global: true
   when:
     - node_release < "16"
@@ -84,7 +83,7 @@
       set -euxo pipefail
       corepack enable
   args:
-    executable: "/bin/bash"
+    executable: /bin/bash
   when:
     - node_release >= "16"
   register: result
