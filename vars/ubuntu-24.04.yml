@@ -19,7 +19,7 @@ _node_release: "20"
 _apt_key:
   "20":
     - keyring: /etc/apt/trusted.gpg.d/home_alvistack.gpg
-      url: http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/Release.key
+      url: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/Release.key
       id: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
       state: present
     - keyring: /etc/apt/trusted.gpg.d/nodesource.gpg
@@ -28,7 +28,7 @@ _apt_key:
       state: present
   "18":
     - keyring: /etc/apt/trusted.gpg.d/home_alvistack.gpg
-      url: http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/Release.key
+      url: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/Release.key
       id: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
       state: present
     - keyring: /etc/apt/trusted.gpg.d/nodesource.gpg
@@ -39,17 +39,17 @@ _apt_key:
 _apt_repository:
   "20":
     - filename: home:alvistack
-      repo: deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/ /
+      repo: deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/ /
       state: present
     - filename: nodesource
-      repo: deb http://deb.nodesource.com/node_20.x jammy main
+      repo: deb http://deb.nodesource.com/node_20.x bookworm main
       state: present
   "18":
     - filename: home:alvistack
-      repo: deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.10/ /
+      repo: deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/ /
       state: present
     - filename: nodesource
-      repo: deb http://deb.nodesource.com/node_18.x jammy main
+      repo: deb http://deb.nodesource.com/node_18.x bookworm main
       state: present
 
 _apt:
