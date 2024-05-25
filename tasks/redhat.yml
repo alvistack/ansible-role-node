@@ -72,7 +72,7 @@
   loop: "{{ _yum_repository[node_release] }}"
 
 - name: yum install
-  ansible.builtin.yum:
+  ansible.legacy.dnf:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
     disablerepo: "{{ item.disablerepo | default(None) or omit }}"
