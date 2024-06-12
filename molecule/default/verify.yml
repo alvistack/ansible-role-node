@@ -24,12 +24,6 @@
       register: result
       changed_when: result is not succeeded
 
-    - name: yarn --version
-      ansible.builtin.command:
-        cmd: yarn --version
-      register: result
-      changed_when: result is not succeeded
-
     - name: eslint --version
       ansible.builtin.command:
         cmd: eslint --version
