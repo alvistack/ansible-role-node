@@ -16,44 +16,42 @@
 
 _node_release: "22"
 
-_apt_key:
+_deb822_repository:
   "22":
-    - keyring: /etc/apt/trusted.gpg.d/nodesource-repo.gpg
-      url: https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key
-      id: 6F71F525282841EEDAF851B42F59B5F99B1BE0B4
+    - name: nodesource
+      types: deb
+      uris: http://deb.nodesource.com/node_22.x
+      suites: nodistro
+      components: main
+      signed_by: https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key
+      enabled: true
       state: present
-    - keyring: /etc/apt/trusted.gpg.d/home_alvistack.gpg
-      url: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/Release.key
-      id: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
+    - name: alvistack
+      types: deb
+      uris: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing
+      suites: /
+      components:
+      signed_by: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/Release.key
+      enabled: true
       state: present
   "20":
-    - keyring: /etc/apt/trusted.gpg.d/nodesource-repo.gpg
-      url: https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key
-      id: 6F71F525282841EEDAF851B42F59B5F99B1BE0B4
+    - name: nodesource
+      types: deb
+      uris: http://deb.nodesource.com/node_20.x
+      suites: nodistro
+      components: main
+      signed_by: https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key
+      enabled: true
       state: present
-    - keyring: /etc/apt/trusted.gpg.d/home_alvistack.gpg
-      url: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/Release.key
-      id: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
-      state: present
-  "16": []
-
-_apt_repository:
-  "22":
-    - filename: nodesource
-      repo: deb http://deb.nodesource.com/node_22.x nodistro main
-      state: present
-    - filename: home:alvistack
-      repo: deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/ /
-      state: present
-  "20":
-    - filename: nodesource
-      repo: deb http://deb.nodesource.com/node_20.x nodistro main
-      state: present
-    - filename: home:alvistack
-      repo: deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/ /
+    - name: alvistack
+      types: deb
+      uris: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing
+      suites: /
+      components:
+      signed_by: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/Release.key
+      enabled: true
       state: present
   "16": []
-
 _apt:
   "22":
     - { state: latest, name: g++ }
