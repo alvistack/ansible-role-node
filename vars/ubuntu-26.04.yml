@@ -1,0 +1,92 @@
+---
+
+# Copyright 2026 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+_node_release: "22"
+
+_apt_key:
+  "22":
+    - url: https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key
+      dest: /etc/apt/keyrings/ndoesource.asc
+      checksum: "sha256:b42e0321dabdc24e892115da705cf061167eac12a317f23d329862d0aa0a271d"
+    - url: http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_26.04/Release.key
+      dest: /etc/apt/keyrings/home-alvistack.asc
+      checksum: "sha256:2959bf5709615cba0109715e4c2001066a4536398fa54f0f602abc208f04017e"
+  "20":
+    - url: https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key
+      dest: /etc/apt/keyrings/ndoesource.asc
+      checksum: "sha256:b42e0321dabdc24e892115da705cf061167eac12a317f23d329862d0aa0a271d"
+    - url: http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_26.04/Release.key
+      dest: /etc/apt/keyrings/home-alvistack.asc
+      checksum: "sha256:2959bf5709615cba0109715e4c2001066a4536398fa54f0f602abc208f04017e"
+  "16": []
+
+_deb822_repository:
+  "22":
+    - name: nodesource
+      types: deb
+      uris: http://deb.nodesource.com/node_22.x
+      suites: nodistro
+      components: main
+      signed_by: /etc/apt/keyrings/ndoesource.asc
+      enabled: true
+      state: present
+    - name: home-alvistack
+      types: deb
+      uris: http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_26.04
+      suites: /
+      components:
+      signed_by: /etc/apt/keyrings/home-alvistack.asc
+      enabled: true
+      state: present
+  "20":
+    - name: nodesource
+      types: deb
+      uris: http://deb.nodesource.com/node_20.x
+      suites: nodistro
+      components: main
+      signed_by: /etc/apt/keyrings/ndoesource.asc
+      enabled: true
+      state: present
+    - name: home-alvistack
+      types: deb
+      uris: http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_26.04
+      suites: /
+      components:
+      signed_by: /etc/apt/keyrings/home-alvistack.asc
+      enabled: true
+      state: present
+  "16": []
+
+_apt:
+  "22":
+    - { state: latest, name: g++ }
+    - { state: latest, name: make }
+    - { state: latest, name: nodejs }
+    - { state: latest, name: eslint }
+    - { state: latest, name: prettier }
+    - { state: latest, name: sass }
+    - { state: latest, name: stylelint }
+    - { state: latest, name: uglifyjs }
+  "20":
+    - { state: latest, name: g++ }
+    - { state: latest, name: make }
+    - { state: latest, name: nodejs }
+    - { state: latest, name: eslint }
+    - { state: latest, name: prettier }
+    - { state: latest, name: sass }
+    - { state: latest, name: stylelint }
+    - { state: latest, name: uglifyjs }
+  "16": []
