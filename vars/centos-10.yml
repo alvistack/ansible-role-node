@@ -78,7 +78,7 @@ _yum_repository:
       state: present
   "16": []
 
-_yum:
+_dnf:
   "22":
     - { state: latest, name: gcc-c++ }
     - { state: latest, name: make }
