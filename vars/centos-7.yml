@@ -16,7 +16,8 @@
 
 _node_release: "16"
 
-_rpm_key:
+_rpm_key: "{{ __rpm_key[node_release] }}"
+__rpm_key:
   "22": []
   "20": []
   "16":
@@ -27,7 +28,8 @@ _rpm_key:
       fingerprint: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
       state: present
 
-_yum_repository:
+_yum_repository: "{{ __yum_repository[node_release] }}"
+__yum_repository:
   "22": []
   "20": []
   "16":
@@ -52,7 +54,8 @@ _yum_repository:
       gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_7/repodata/repomd.xml.key
       state: present
 
-_yum:
+_yum: "{{ __yum[node_release] }}"
+__yum:
   "22": []
   "20": []
   "16":

@@ -16,7 +16,8 @@
 
 _node_release: "22"
 
-_rpm_key:
+_rpm_key: "{{ __rpm_key[node_release] }}"
+__rpm_key:
   "22":
     - key: https://rpm.nodesource.com/gpgkey/ns-operations-public.key
       fingerprint: 242B813831AF09562B6C46F76B88DA4E3AF28A14
@@ -33,7 +34,8 @@ _rpm_key:
       state: present
   "16": []
 
-_yum_repository:
+_yum_repository: "{{ __yum_repository[node_release] }}"
+__yum_repository:
   "22":
     - file: nodesource-nodejs
       name: nodesource-nodejs
@@ -78,7 +80,8 @@ _yum_repository:
       state: present
   "16": []
 
-_yum:
+_yum: "{{ __yum[node_release] }}"
+__yum:
   "22":
     - { state: latest, name: gcc-c++ }
     - { state: latest, name: make }
