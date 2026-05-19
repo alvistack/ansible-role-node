@@ -16,7 +16,8 @@
 
 _node_release: "22"
 
-_apt_key:
+_apt_key: "{{ __apt_key[node_release] }}"
+__apt_key:
   "22":
     - url: https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key
       dest: /etc/apt/keyrings/ndoesource.asc
@@ -33,7 +34,8 @@ _apt_key:
       checksum: "sha256:2959bf5709615cba0109715e4c2001066a4536398fa54f0f602abc208f04017e"
   "16": []
 
-_deb822_repository:
+_deb822_repository: "{{ __deb822_repository[node_release] }}"
+__deb822_repository:
   "22":
     - name: nodesource
       types: deb
@@ -70,7 +72,8 @@ _deb822_repository:
       state: present
   "16": []
 
-_apt:
+_apt: "{{ __apt[node_release] }}"
+__apt:
   "22":
     - { state: latest, name: g++ }
     - { state: latest, name: make }

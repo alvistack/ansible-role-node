@@ -16,7 +16,8 @@
 
 _node_release: "22"
 
-_rpm_key:
+_rpm_key: "{{ __rpm_key[node_release] }}"
+__rpm_key:
   "22":
     - key: http://downloadcontent.opensuse.org/repositories/devel:/languages:/nodejs/16.0/repodata/repomd.xml.key
       fingerprint: 7A9C33EDF1E5C271CD4BCCBB3C66CD9BA89C3A8A
@@ -33,7 +34,8 @@ _rpm_key:
       state: present
   "16": []
 
-_yum_repository:
+_yum_repository: "{{ __yum_repository[node_release] }}"
+__yum_repository:
   "22":
     - file: devel_languages_nodejs
       name: devel_languages_nodejs
@@ -78,7 +80,8 @@ _yum_repository:
       state: present
   "16": []
 
-_zypper:
+_zypper: "{{ __zypper[node_release] }}"
+__zypper:
   "22":
     - { state: latest, name: gcc-c++ }
     - { state: latest, name: make }
